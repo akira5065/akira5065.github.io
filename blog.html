@@ -43,14 +43,29 @@
     margin:0 auto;
     padding:48px 24px 80px;
   }
-  article.latest{ margin-bottom:64px; }
+  article.latest{
+    margin-bottom:64px;
+    padding-bottom:56px;
+    border-bottom:1px solid var(--line);
+  }
+  article.latest:last-of-type{ border-bottom:none; padding-bottom:0; }
   article h2{
     font-size:1.35rem;
     border-left:3px solid var(--accent);
     padding-left:12px;
     margin:0 0 8px;
     font-weight:500;
+    line-height:1.6;
   }
+  article h2 a{ color:inherit; text-decoration:none; }
+  article h2 a:hover{ color:var(--accent); }
+  .more{
+    text-align:right;
+    font-size:.9rem;
+    letter-spacing:.06em;
+  }
+  .more a{ color:var(--accent); text-decoration:none; }
+  .more a:hover{ text-decoration:underline; }
   .date{
     color:var(--sub);
     font-size:.8rem;
@@ -137,6 +152,30 @@
 <main>
 
   <article class="latest">
+    <h2><a href="blog-20260815.html">秋の兆し ── 小川町の、八月十五日</a></h2>
+    <div class="date">2026.08.15 &nbsp;|&nbsp; 終戦記念日</div>
+
+    <div class="gallery">
+      <img src="S__31940614_0.jpg" alt="台風後、増水した市ノ川">
+      <img src="S__31940615_0_rot180.jpg" alt="いただいたスイカ">
+    </div>
+
+    <p class="lead">
+      台風が抜けた翌朝、いつもの散歩道を歩いた。橋の上に立つと、市ノ川が濁っていた。普段は底の石が見えるほどの流れが、茶色く重たい水になって、音を立てて下っていく。ほんの数日前まで、静かな川だったはずである。
+    </p>
+
+    <p>
+      顔を上げれば、空はもう嘘のように晴れている。ただ、雲の輪郭が、少し前とは変わったように思う。真夏の入道雲は空の低いところで沸き立っていたが、この日の雲は、ずいぶん高いところを流れていた。夕方には、どこかでひぐらしが鳴いていた。八月十五日である。まだ暑い。それでも、秋はもう、山のほうから降りてきている。
+    </p>
+
+    <p>
+      散歩コースのヤギに子が生まれていたこと。数十年前に遊就館で読んだ、特攻に発つ前の若者たちの遺書のこと。そして夕方、八十近いご近所の方が、おぼつかない足取りで大きなスイカを運んでくださったこと。この日に考えたことを、少し長く書いた。
+    </p>
+
+    <p class="more">→ <a href="blog-20260815.html">続きを読む</a></p>
+  </article>
+
+  <article class="latest">
     <h2>夕雲のもと、田畑をめぐる</h2>
     <div class="date">2026.04.27 &nbsp;|&nbsp; 春の夕</div>
 
@@ -170,7 +209,7 @@
   <section class="archive-section">
     <h3>P A S T &nbsp; E N T R I E S</h3>
     <ul class="archive-list" id="archiveList">
-      <li class="archive-empty">まだ過去の記事はありません。次の散歩を待ちましょう。</li>
+      <li><span class="d">2026.08.15</span><a href="blog-20260815.html">秋の兆し ── 小川町の、八月十五日</a></li>
     </ul>
   </section>
 
