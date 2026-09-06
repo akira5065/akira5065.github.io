@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>過去設計書 単価当てアプリ | 株式会社新井設備工業</title>
+<style>
+  :root { --ink:#1f2933; --sub:#52606d; --line:#d9e2ec; --bg:#f5f7fa; --card:#fff; --acc:#1f6feb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Yu Gothic UI","Meiryo",system-ui,sans-serif; font-size:14px; color:var(--ink); background:var(--bg); }
+  header { background:#102a43; color:#fff; padding:14px 22px; display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; }
+  header h1 { margin:0; font-size:18px; font-weight:700; }
+  header .sub { color:#bcccdc; font-size:12px; }
+  header .credit { margin-left:auto; color:#fff; font-weight:600; font-size:12px; }
+  main { padding:18px 22px 60px; max-width:1500px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin-bottom:14px; }
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  input[type=text], input[type=password] { padding:8px 10px; border:1px solid #9fb3c8; border-radius:6px; font-size:14px; }
+  input.num { width:110px; text-align:right; padding:4px 6px; border:1px solid #9fb3c8; border-radius:4px; font-size:13px; }
+  button { padding:8px 14px; border:1px solid #1f6feb; background:#1f6feb; color:#fff; border-radius:6px; font-size:14px; cursor:pointer; }
+  button.ghost { background:#fff; color:#1f6feb; }
+  button.small { padding:3px 8px; font-size:12px; }
+  button:disabled { opacity:.5; cursor:default; }
+  .muted { color:var(--sub); font-size:12px; }
+  .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:6px 18px; }
+  .meta div b { display:inline-block; min-width:110px; color:var(--sub); font-weight:600; }
+  .tabs { display:flex; gap:4px; border-bottom:2px solid var(--line); margin:10px 0; flex-wrap:wrap; }
+  .tabs button { background:none; border:none; color:var(--sub); border-bottom:3px solid transparent; border-radius:0; padding:8px 14px; font-weight:600; }
+  .tabs button.on { color:var(--acc); border-bottom-color:var(--acc); }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; background:#fff; }
+  th, td { border:1px solid var(--line); padding:5px 7px; vertical-align:top; }
+  th { background:#e6eef7; font-weight:600; text-align:center; white-space:nowrap; }
+  td.r { text-align:right; white-space:nowrap; }
+  td.c { text-align:center; white-space:nowrap; }
+  tr.parent td { background:#f7f9fb; font-weight:600; }
+  tr.keihi td { background:#fbfbf4; }
+  .conf { display:inline-block; min-width:22px; text-align:center; border-radius:10px; padding:1px 6px; font-weight:700; }
+  .conf.a { background:#d1e7c8; color:#245b17; } .conf.b { background:#cfe2f3; color:#1b4a7a; }
+  .conf.c { background:#ffe9a8; color:#7a5200; } .conf.x { background:#f8d7da; color:#842029; }
+  .cands { background:#fbfcfe; }
+  .cands table { font-size:12px; }
+  .cands th { background:#eef3f8; }
+  .src { font-size:12px; color:var(--sub); }
+  .block { margin-bottom:18px; }
+  .block h3 { margin:6px 0; font-size:14px; }
+  .warn { color:#a4262c; }
+  .legend span { margin-right:14px; }
+  #busy { display:none; color:var(--acc); font-weight:600; }
+  .total { font-size:15px; font-weight:700; }
+  .drop { border:2px dashed #9fb3c8; border-radius:8px; padding:16px; color:var(--sub); font-size:13px; text-align:center; }
+  .drop.over { background:#eef4ff; border-color:#1f6feb; }
+  .pick { display:inline-block; padding:8px 14px; border:1px solid #1f6feb; color:#1f6feb; border-radius:6px; cursor:pointer; background:#fff; font-size:14px; margin:4px; }
+  .pick input { display:none; }
+  #gate { max-width:520px; margin:60px auto; }
+  #gate h2 { margin:0 0 8px; font-size:17px; }
+  footer { text-align:right; color:var(--sub); font-size:12px; padding:0 22px 20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>過去設計書 単価当てアプリ</h1>
+  <span class="sub">入札書類（仕様書・積算参考資料）を読み込み、令和3〜8年度の県設計書の単価を当てます</span>
+  <span class="credit">株式会社新井設備工業 開発</span>
+</header>
+<main>
+  <div id="gate" class="card">
+    <h2>社内専用です。合言葉を入れてください</h2>
+    <div class="muted" style="margin-bottom:10px">単価データは暗号化されています。合言葉を知っている社員だけが使えます。PDFはこのブラウザの中だけで処理され、どこにも送られません。</div>
+    <div class="row"><input type="password" id="gate-pw" placeholder="合言葉" style="flex:1"><button id="gate-go">開く</button></div>
+    <div id="gate-msg" class="muted" style="margin-top:8px"></div>
+    <div id="gate-err" class="warn" style="margin-top:8px"></div>
+  </div>
+
+  <div id="main" style="display:none">
+    <div class="card">
+      <div id="drop" class="drop">
+        入札書類のフォルダごと、ここにドラッグ＆ドロップ<br>
+        <span class="muted">（工事仕様書・積算参考資料・数量計算書のPDF。ファイル名で自動的に見分けます）</span><br>
+        <label class="pick">フォルダを選ぶ<input type="file" id="folder" webkitdirectory directory multiple></label>
+        <label class="pick">PDFを選ぶ（複数可）<input type="file" id="files" multiple accept="application/pdf"></label>
+      </div>
+      <div class="row" style="margin-top:8px"><span id="busy"></span><span id="err" class="warn"></span></div>
+      <div id="dbinfo" class="muted" style="margin-top:6px"></div>
+    </div>
+
+    <div id="result" style="display:none">
+      <div class="card">
+        <div class="meta" id="meta"></div>
+        <div class="row" style="margin-top:10px">
+          <span class="total" id="total"></span>
+          <span class="muted" id="stat"></span>
+          <span style="flex:1"></span>
+          <button id="writepdf">仕様書に書き込んで保存（PDF）</button>
+          <button id="export" class="ghost">Excelに書き出す</button>
+          <span class="muted" id="saved"></span>
+        </div>
+        <div class="legend muted" style="margin-top:8px">
+          信頼度：<span class="conf a">◎</span>名称と仕様が一致　<span class="conf b">○</span>名称一致・仕様は一部　<span class="conf c">△</span>近い名称のみ（要確認）　<span class="conf x">—</span>候補なし
+          　／　「採用年月」は、その単価が載っていた過去設計書の単価適用年月。古いものは改定に注意。
+        </div>
+      </div>
+      <div class="tabs">
+        <button class="on" data-tab="uchiwake">内訳書</button>
+        <button data-tab="daika">代価表（積上げ）</button>
+        <button data-tab="shizai">資材単価</button>
+        <button data-tab="search">単価を探す</button>
+        <button data-tab="keihi">経費の参考</button>
+      </div>
+      <div class="card tablewrap" id="tab-uchiwake"></div>
+      <div class="card tablewrap" id="tab-daika" style="display:none"></div>
+      <div class="card tablewrap" id="tab-shizai" style="display:none"></div>
+      <div class="card" id="tab-search" style="display:none">
+        <div class="row">
+          <select id="s-kind"><option value="uchiwake">内訳書の細別（施工単価）</option><option value="daika">代価表の行（労務・材料・機械）</option><option value="material">資材調書</option></select>
+          <input type="text" id="s-q" placeholder="名称（例：舗装版切断、土木一般世話役、塩化ビニル管）" style="width:320px">
+          <input type="text" id="s-kikaku" placeholder="規格（任意）" style="width:200px">
+          <input type="text" id="s-unit" placeholder="単位" style="width:70px">
+          <input type="text" id="s-ym" placeholder="対象年月（例 令和08年02月）" style="width:200px">
+          <button id="s-go">探す</button>
+        </div>
+        <div id="s-out" class="tablewrap" style="margin-top:10px"></div>
+      </div>
+      <div class="card" id="tab-keihi" style="display:none"></div>
+    </div>
+    <div class="card" id="search-only" style="display:none"></div>
+  </div>
+</main>
+<footer>過去設計書 単価当てアプリ　株式会社新井設備工業 開発</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
