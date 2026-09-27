@@ -1260,6 +1260,11 @@
     }
   }
 </style>
+<style>
+.company-video{padding:64px 24px!important}.cv-intro{margin-bottom:28px!important}
+.vchip-light{background:#fff!important;border-color:rgba(45,90,30,.3)!important;text-align:left;box-shadow:0 10px 30px rgba(31,61,20,.12)}
+.vchip-light .vtx b{color:#1f3d14!important}.vchip-light .vtx span{color:#6b8a5a!important}
+</style>
 </head>
 <body>
 
@@ -1586,13 +1591,7 @@ function toggle(id) {
       地中に眠る一本の配管から、空を仰ぐ大型重機まで。<br>
       埼玉・小川町から、暮らしを静かに支える現場の風景をご覧ください。
     </p>
-    <div class="cv-frame">
-      <video controls preload="metadata" playsinline poster="video-poster.jpg">
-        <source src="arai_setsubi_kogyo_FINAL_v9.mp4" type="video/mp4">
-        お使いのブラウザでは動画を再生できません。最新のブラウザでご覧ください。
-      </video>
-    </div>
-    <p class="cv-caption">▶ 再生ボタンをクリックしてご覧ください（90秒）</p>
+    <div style="display:flex;justify-content:center"><div class="vchip-wrap"><button type="button" class="vchip" onclick="vmOpen('arai_setsubi_kogyo_FINAL_v9.mp4','video-poster.jpg','会社紹介動画「私たちの仕事」（90秒）')"><span class="vthumb"><img src="video-poster.jpg" alt="" loading="lazy"></span><span class="vtx"><b>▶ 会社紹介動画「私たちの仕事」</b><span>90秒・音声あり／押すと再生します</span></span></button></div></div>
   </div>
 </section>
 
@@ -2285,11 +2284,7 @@ function toggle(id) {
   <p class="ask-lead">過去の設計書という確かな根拠に基づき、積算を、より速く、より確かに。</p>
   <p class="ask-intro">情報公開請求により小川町から開示された設計書のデータを収録し、過去単価の検索から、設計書の該当頁の参照、仕様書PDFへの単価記入、積算の検証まで、一連の業務を一つのソフトウェアで一貫して支援します。株式会社新井設備工業が自社で開発しました。</p>
 
-  <div class="ask-video">
-    <video src="ask_media/ask_intro_720p.mp4" poster="ask_media/poster.jpg" controls playsinline preload="metadata"
-      aria-label="小川町 過去単価・項目検索（ASK）の紹介動画（約90秒・音声あり）"></video>
-  </div>
-  <p class="ask-caption">▶ 再生ボタンをクリックしてご覧ください（約90秒）</p>
+  <div class="vchip-wrap"><button type="button" class="vchip" onclick="vmOpen('ask_media/ask_intro_720p.mp4','ask_media/poster.jpg','小川町 過去単価・項目検索（ASK）の紹介（約90秒）')"><span class="vthumb"><img src="ask_media/poster.jpg" alt="" loading="lazy"></span><span class="vtx"><b>▶ 小川町 過去単価・項目検索（ASK）の紹介</b><span>約90秒・音声あり／押すと再生します</span></span></button></div>
 
   <div class="ask-stats">
     <div class="ask-stat"><b>19,181件</b><span>収録している過去単価（令和3〜7年度）</span></div>
@@ -2514,11 +2509,7 @@ function toggle(id) {
   <p class="ask-lead">過去の設計書の実績を、出どころとともに確かめながら、積算を、より速く。</p>
   <p class="ask-intro">埼玉県の過去の設計書から単価を引き、入札の仕様書に当て、内訳書を組んで工事価格まで計算する、株式会社新井設備工業が自社で開発した積算支援ソフトウェアです。</p>
 
-  <div class="ask-video">
-    <video src="ask_media/sk_intro_720p.mp4" poster="ask_media/sk_poster.jpg" controls playsinline preload="metadata"
-      aria-label="積算ソフト（ASK）の紹介動画（約85秒・音声あり）"></video>
-  </div>
-  <p class="ask-caption">▶ 再生ボタンをクリックしてご覧ください（約85秒）</p>
+  <div class="vchip-wrap"><button type="button" class="vchip" onclick="vmOpen('ask_media/sk_intro_720p.mp4','ask_media/sk_poster.jpg','積算ソフト（ASK）の紹介（約85秒）')"><span class="vthumb"><img src="ask_media/sk_poster.jpg" alt="" loading="lazy"></span><span class="vtx"><b>▶ 積算ソフト（ASK）の紹介</b><span>約85秒・音声あり／押すと再生します</span></span></button></div>
 
   <div class="ask-stats">
     <div class="ask-stat"><b>5,929件</b><span>取り込んだ設計書（埼玉県の発注課所 19か所・令和3〜8年度）</span></div>
@@ -2753,11 +2744,7 @@ function gpSeek(t){
   <p class="ask-lead">撮ったその時点で、整理までを終える。</p>
   <p class="ask-intro">スマートフォンで撮った工事写真を、その場で写真管理表の撮影項目に仕分け、電子黒板と配管の略図を書き入れて、出来形の実測値とともに記録するウェブアプリです。株式会社新井設備工業スタッフが、実際の工事の写真管理表をもとに開発しました。</p>
 
-  <div class="ask-video">
-    <video id="gp-video" src="ask_media/gp_guide.mp4" poster="ask_media/gp_poster.jpg" controls playsinline preload="metadata"
-      aria-label="現場写真仕分けの紹介動画（約7分39秒・音声あり）"></video>
-  </div>
-  <p class="ask-caption">▶ 再生ボタンをクリックしてご覧ください（約7分39秒）。下の章を押すと、その場面から再生します</p>
+  <div class="vchip-wrap"><button type="button" class="vchip" onclick="vmOpen('ask_media/gp_guide.mp4','ask_media/gp_poster.jpg','現場写真仕分けの使い方（約7分39秒）')"><span class="vthumb"><img src="ask_media/gp_poster.jpg" alt="" loading="lazy"></span><span class="vtx"><b>▶ 現場写真仕分けの使い方</b><span>約7分39秒・音声あり／押すと再生します</span></span></button></div>
   <ul class="gp-chapters" aria-label="動画の章">
       <li><button type="button" onclick="gpSeek(0)"><span>0:00</span>はじめに</button></li>
       <li><button type="button" onclick="gpSeek(86)"><span>1:26</span>1. 測点と撮影項目</button></li>
@@ -5998,5 +5985,71 @@ details.pg-fold[open]>summary{border-bottom:1px solid rgba(34,211,238,.22)}
 })();
 </script>
 <!-- ASK-FOLD END -->
+
+<!-- VIDEO-MODAL BEGIN -->
+<style>
+#vm{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(4,10,24,.86);padding:16px}
+#vm.on{display:flex}
+#vm .vm-box{position:relative;width:min(960px,100%)}
+#vm video{display:block;width:100%;max-height:80vh;border-radius:12px;background:#000}
+#vm .vm-t{color:#e8f1fb;font-size:14px;margin:10px 2px 0}
+#vm .vm-x{position:absolute;top:-44px;right:0;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.vchip{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:16px;width:100%;max-width:560px;
+  padding:10px;border-radius:12px;border:1px solid rgba(34,211,238,.35);background:rgba(15,38,81,.7);transition:border-color .2s,transform .2s}
+.vchip:hover,.vchip:focus-visible{border-color:rgba(34,211,238,.8);transform:translateY(-2px)}
+.vchip .vthumb{position:relative;flex:none;width:168px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000}
+.vchip .vthumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85}
+.vchip .vthumb::after{content:"";position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;
+  background:rgba(255,255,255,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l9 5-9 5z' fill='%230b2350'/%3E%3C/svg%3E") center/22px no-repeat}
+.vchip .vtx b{display:block;color:#fff;font-size:15.5px;line-height:1.5}
+.vchip .vtx span{display:block;color:#a9bad0;font-size:13px;margin-top:2px}
+.vchip-wrap{margin:0 0 26px}
+@media (max-width:560px){.vchip .vthumb{width:120px}.vchip .vtx b{font-size:14px}}
+.blog-vbtn{display:inline-flex;align-items:center;gap:8px;margin:14px 0;padding:10px 18px;border-radius:999px;border:1px solid #2d5a1e;
+  background:#fff;color:#1b4512;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+.blog-vbtn:hover{background:#eef5ea}
+</style>
+<div id="vm" role="dialog" aria-modal="true" aria-label="動画の再生" onclick="if(event.target===this)vmClose()">
+  <div class="vm-box">
+    <button class="vm-x" type="button" aria-label="閉じる" onclick="vmClose()">×</button>
+    <video id="vm-v" controls playsinline preload="none"></video>
+    <p class="vm-t" id="vm-t"></p>
+  </div>
+</div>
+<script>
+function vmOpen(src, poster, title, t){
+  var m=document.getElementById('vm'), v=document.getElementById('vm-v');
+  if(v.getAttribute('src')!==src){ v.setAttribute('src',src); v.setAttribute('poster',poster||''); }
+  document.getElementById('vm-t').textContent=title||'';
+  m.classList.add('on'); document.body.style.overflow='hidden';
+  function seek(){ if(t!=null){ try{v.currentTime=t;}catch(e){} } }
+  if(v.readyState>=1) seek(); else { v.addEventListener('loadedmetadata',seek,{once:true}); v.load(); }
+  var p=v.play(); if(p&&p.catch)p.catch(function(){});
+}
+function vmClose(){
+  var m=document.getElementById('vm'), v=document.getElementById('vm-v');
+  v.pause(); m.classList.remove('on'); document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){ if(e.key==='Escape')vmClose(); });
+/* 現場写真仕分けの章ボタン → ポップアップでその場面から */
+function gpSeek(t){ vmOpen('ask_media/gp_guide.mp4','ask_media/gp_poster.jpg','現場写真仕分けの使い方（約7分39秒）',t); }
+/* ブログの動画は「▶ 動画を見る」ボタンにたたむ */
+(function(){
+  function fold(){
+    var blog=document.getElementById('blog'); if(!blog) return;
+    blog.querySelectorAll('video').forEach(function(v){
+      var box=v.closest('.blog-video-wrap')||v.parentNode;
+      if(box.dataset.folded) return; box.dataset.folded='1';
+      var cap=box.querySelector('.photo-caption')||(box.nextElementSibling&&box.nextElementSibling.classList.contains('photo-caption')?box.nextElementSibling:null);
+      var b=document.createElement('button'); b.type='button'; b.className='blog-vbtn';
+      b.textContent='▶ 動画を見る'+(cap?'：'+cap.textContent.replace(/^動画[①②]?：/,'').split('──')[0].trim():'');
+      box.style.display='none'; box.parentNode.insertBefore(b,box);
+      b.onclick=function(){ box.style.display=''; b.remove(); var p=v.play(); if(p&&p.catch)p.catch(function(){}); };
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fold); else fold();
+})();
+</script>
+<!-- VIDEO-MODAL END -->
 </body>
 </html>
