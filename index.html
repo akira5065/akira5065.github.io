@@ -1484,6 +1484,10 @@ function toggle(id) {
   <div class="hero-scroll"><span></span>SCROLL</div>
 </section>
 
+<!-- BLOG-TEASER (最新ブログ3件を自動表示) -->
+<div id="blogTeaser" class="blog-teaser" hidden></div>
+
+
 <!-- ASK-TOPBAND BEGIN -->
 <style>
 #ask-top{--c:#22d3ee;position:relative;background:
@@ -6051,5 +6055,113 @@ function gpSeek(t){ vmOpen('ask_media/gp_guide.mp4','ask_media/gp_poster.jpg','�
 })();
 </script>
 <!-- VIDEO-MODAL END -->
+
+<!-- BLOG-READABILITY BEGIN : 新着帯・記事一覧・続きを読む・閲覧計測 -->
+<style>
+.blog-teaser{background:#06122b;border-top:1px solid rgba(34,211,238,.25);border-bottom:1px solid rgba(34,211,238,.25);padding:14px 20px}
+.blog-teaser-in{max-width:1200px;margin:0 auto;display:flex;gap:10px 22px;align-items:baseline;flex-wrap:wrap}
+.blog-teaser-label{color:#22d3ee;font-weight:700;font-size:13px;letter-spacing:.12em;white-space:nowrap}
+.blog-teaser-list{display:flex;gap:6px 24px;flex-wrap:wrap;flex:1 1 300px;list-style:none;margin:0;padding:0}
+.blog-teaser-list a{color:#e6f1ff;font-size:14px;line-height:1.6;text-decoration:underline;text-decoration-color:rgba(230,241,255,.35);text-underline-offset:4px}
+.blog-teaser-list a:hover,.blog-teaser-list a:focus-visible{color:#22d3ee;text-decoration-color:#22d3ee}
+.blog-teaser-list time{color:#8fb3cf;font-size:12px;margin-right:8px;font-variant-numeric:tabular-nums}
+.blog-teaser-all{color:#22d3ee !important;font-size:13px;font-weight:700;white-space:nowrap}
+.blog-toc{max-width:900px;margin:0 auto 40px;background:rgba(13,31,64,.92);border:1px solid rgba(34,211,238,.22);border-radius:12px;padding:22px 28px}
+.blog-toc h3{font-size:16px;color:#fff;margin:0 0 12px;letter-spacing:.08em}
+.blog-toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2px 28px}
+.blog-toc li{border-bottom:1px dotted rgba(169,198,220,.3);min-width:0}
+.blog-toc a{display:flex;gap:12px;padding:9px 2px;font-size:14px;line-height:1.55;color:#e6f1ff;white-space:normal;min-width:0}
+.blog-toc a span{min-width:0;overflow-wrap:anywhere}
+.blog-toc a:hover,.blog-toc a:focus-visible{color:#22d3ee;background:rgba(34,211,238,.08)}
+.blog-toc time{color:#7fd3e6;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:2px}
+#blog article.blog-post{scroll-margin-top:90px}
+.blog-post-body.bp-collapsed{max-height:440px;overflow:hidden;position:relative}
+.blog-post-body.bp-collapsed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,transparent,var(--bp-bg,#fff) 85%);pointer-events:none}
+.bp-more{display:block;margin:0 auto 26px;background:#2d5a1e;color:#fff;border:none;padding:12px 34px;border-radius:30px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 3px 12px rgba(27,69,18,.22)}
+.bp-more:hover{background:#1b4512}
+.bp-more:focus-visible{outline:3px solid #9fd08a;outline-offset:2px}
+@media(max-width:600px){.blog-toc{padding:16px}.blog-toc ol{grid-template-columns:1fr}.blog-teaser-list{flex-direction:column;gap:4px}}
+</style>
+<script>
+(function(){
+  function ev(name,p){try{if(typeof gtag==='function')gtag('event',name,p||{});}catch(e){}}
+  function init(){
+    var sec=document.getElementById('blog'); if(!sec) return;
+    var arts=Array.prototype.slice.call(sec.querySelectorAll('article.blog-post'));
+    if(!arts.length) return;
+    var used={};
+    var items=arts.map(function(a){
+      var d=a.querySelector('.blog-date'),h=a.querySelector('.blog-post-header h3');
+      var date=d?d.textContent.trim():'',num=date.replace(/[^0-9]/g,'');
+      var id='blog-'+(num||'post'); if(used[id]){used[id]++;id+='-'+used[id];}else used[id]=1;
+      if(!a.id) a.id=id;
+      return {el:a,id:a.id,date:date,num:parseInt(num||'0',10),title:h?h.textContent.trim():''};
+    }).sort(function(x,y){return y.num-x.num;});
+
+    // 続きを読む
+    items.forEach(function(it){
+      var body=it.el.querySelector('.blog-post-body'); if(!body||it.el.querySelector('.bp-more')) return;
+      body.classList.add('bp-collapsed');
+      try{var bg=getComputedStyle(it.el).backgroundColor; if(bg&&bg!=='rgba(0, 0, 0, 0)') body.style.setProperty('--bp-bg',bg);}catch(e){}
+      var b=document.createElement('button'); b.type='button'; b.className='bp-more'; b.textContent='続きを読む';
+      b.setAttribute('aria-expanded','false');
+      b.addEventListener('click',function(){
+        var open=body.classList.toggle('bp-collapsed')===false;
+        b.textContent=open?'たたむ':'続きを読む'; b.setAttribute('aria-expanded',open?'true':'false');
+        if(open) ev('blog_read',{blog_title:it.title,blog_date:it.date});
+        else it.el.scrollIntoView({block:'start'});
+      });
+      it.el.appendChild(b); it.more=b; it.body=body;
+    });
+    function openArticle(id,from){
+      var it=items.filter(function(i){return i.id===id;})[0]; if(!it) return;
+      var p=it.el.parentElement; while(p){ if(p.tagName==='DETAILS') p.open=true; p=p.parentElement; }
+      var ap=document.getElementById('archivePosts');
+      if(ap&&ap.contains(it.el)&&ap.style.display!=='block'&&typeof toggleArchive==='function') toggleArchive();
+      if(it.body&&it.body.classList.contains('bp-collapsed')&&it.more) it.more.click();
+      it.el.scrollIntoView({block:'start'});
+      if(from) ev('blog_open',{blog_title:it.title,from:from});
+    }
+    function link(it,from){
+      var a=document.createElement('a'); a.href='#'+it.id;
+      var t=document.createElement('time'); t.textContent=it.date; a.appendChild(t);
+      var sp=document.createElement('span'); sp.textContent=it.title; a.appendChild(sp);
+      a.addEventListener('click',function(e){e.preventDefault();history.replaceState(null,'','#'+it.id);openArticle(it.id,from);});
+      return a;
+    }
+    // 記事一覧
+    var intro=sec.querySelector('.blog-intro');
+    if(intro&&!sec.querySelector('.blog-toc')){
+      var nav=document.createElement('div'); nav.className='blog-toc'; nav.setAttribute('role','navigation'); nav.setAttribute('aria-label','ブログ記事一覧');
+      var h=document.createElement('h3'); h.textContent='記事一覧（'+items.length+'本）'; nav.appendChild(h);
+      var ol=document.createElement('ol');
+      items.forEach(function(it){var li=document.createElement('li'); li.appendChild(link(it,'toc')); ol.appendChild(li);});
+      nav.appendChild(ol); intro.parentNode.insertBefore(nav,intro.nextSibling);
+    }
+    // 新着帯（ページ上部）
+    var ts=document.getElementById('blogTeaser');
+    if(ts){
+      var inn=document.createElement('div'); inn.className='blog-teaser-in';
+      var lb=document.createElement('span'); lb.className='blog-teaser-label'; lb.textContent='社長ブログ 新着'; inn.appendChild(lb);
+      var ul=document.createElement('ul'); ul.className='blog-teaser-list';
+      items.slice(0,3).forEach(function(it){var li=document.createElement('li'); li.appendChild(link(it,'teaser')); ul.appendChild(li);});
+      inn.appendChild(ul);
+      var all=document.createElement('a'); all.className='blog-teaser-all'; all.href='#blog'; all.textContent='一覧を見る →'; inn.appendChild(all);
+      ts.appendChild(inn); ts.hidden=false;
+    }
+    // ブログ欄まで読み進めた人を数える
+    if('IntersectionObserver' in window){
+      var seen=false,io=new IntersectionObserver(function(en){
+        if(!seen&&en.some(function(e){return e.isIntersecting;})){seen=true;ev('blog_section_view');io.disconnect();}
+      },{rootMargin:'0px 0px -30% 0px'});
+      io.observe(sec);
+    }
+    if(/^#blog-/.test(location.hash)) setTimeout(function(){openArticle(location.hash.slice(1),'link');},300);
+  }
+  function start(){setTimeout(init,0);}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
+<!-- BLOG-READABILITY END -->
 </body>
 </html>
