@@ -1467,8 +1467,8 @@ function toggle(id) {
   <div class="hero-slide"></div>
   <!-- HERO-CM : 会社CM動画（CM→写真スライド→CM…の繰り返し） -->
   <span class="hero-cm-bg" aria-hidden="true"></span>
-  <video class="hero-cm" id="heroCm" muted playsinline preload="metadata" poster="arai_cm_v2_poster.jpg" aria-label="株式会社新井設備工業 CM動画">
-    <source src="arai_cm_v2.mp4" type="video/mp4">
+  <video class="hero-cm" id="heroCm" playsinline preload="metadata" poster="arai_cm_v2_poster.jpg" aria-label="株式会社新井設備工業 CM動画">
+    <source src="arai_cm_v4.mp4" type="video/mp4">
   </video>
   <button type="button" class="hero-cm-sound" id="heroCmSound" aria-pressed="false" hidden>&#128263; 音を出す</button>
   <div>
@@ -1509,7 +1509,7 @@ function toggle(id) {
   var hero=document.querySelector('.hero'), v=document.getElementById('heroCm'), btn=document.getElementById('heroCmSound');
   if(!hero||!v) return;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; /* 動きを減らす設定の方は写真のみ */
-  var SLIDES_MS=60000, holdT=null, nextT=null;
+  var SLIDES_MS=60000, holdT=null, nextT=null, wantSound=true; /* 音あり再生を試み、ブラウザに止められたら無音で開始→最初の操作で音を出す */
   function fit(){ /* 新着ブログ帯に字幕が隠れないよう、帯の高さぶん動画を上げる */
     var t=document.getElementById('blogTeaser'), h=(t&&!t.hidden)?t.offsetHeight:0;
     v.style.height=h?'calc(100% - '+h+'px)':'';
@@ -1524,6 +1524,7 @@ function toggle(id) {
   function showCm(){
     clearTimeout(nextT); fit();
     try{ v.currentTime=0; }catch(e){}
+    v.muted=!wantSound; label();
     var p=v.play();
     function on(){
       hero.classList.add('cm-on'); if(btn) btn.hidden=false;
@@ -1533,7 +1534,13 @@ function toggle(id) {
     else on();
   }
   function label(){ if(!btn) return; btn.innerHTML=v.muted?'&#128263; 音を出す':'&#128266; 音を消す'; btn.setAttribute('aria-pressed',v.muted?'false':'true'); }
-  if(btn) btn.addEventListener('click',function(){ v.muted=!v.muted; label(); });
+  if(btn) btn.addEventListener('click',function(){ wantSound=v.muted; v.muted=!wantSound; label(); });
+  function firstTouch(e){
+    if(btn&&e.target&&btn.contains(e.target)) return;
+    ['pointerdown','keydown','touchstart'].forEach(function(n){ document.removeEventListener(n,firstTouch,true); });
+    if(wantSound&&v.muted&&!v.paused){ v.muted=false; label(); }
+  }
+  ['pointerdown','keydown','touchstart'].forEach(function(n){ document.addEventListener(n,firstTouch,true); });
   v.addEventListener('ended',showSlides);
   v.addEventListener('error',showSlides,true);
   window.addEventListener('resize',fit);
