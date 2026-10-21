@@ -1508,6 +1508,7 @@ function toggle(id) {
 (function(){
   var hero=document.querySelector('.hero'), v=document.getElementById('heroCm'), btn=document.getElementById('heroCmSound');
   if(!hero||!v) return;
+  v.volume=0.5; /* 音量は半分くらいに絞る */
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; /* 動きを減らす設定の方は写真のみ */
   var SLIDES_MS=60000, holdT=null, nextT=null, wantSound=true; /* 音あり再生を試み、ブラウザに止められたら無音で開始→最初の操作で音を出す */
   function fit(){ /* 新着ブログ帯に字幕が隠れないよう、帯の高さぶん動画を上げる */
@@ -1562,12 +1563,19 @@ function toggle(id) {
   }
   function label(){ if(!btn) return; btn.innerHTML=v.muted?'&#128263; 音を出す':'&#128266; 音を消す'; btn.setAttribute('aria-pressed',v.muted?'false':'true'); }
   if(btn) btn.addEventListener('click',function(){ wantSound=v.muted; v.muted=!wantSound; label(); });
+  /* 最初のクリック・タップで音を出す。指を離した瞬間（click/touchend）でないとブラウザが「操作」と認めず、
+     音を出した途端に動画を止めてしまう。Edgeはクリック時に操作扱いでないkeydownも送ってくるので、それは見送る */
   function firstTouch(e){
     if(btn&&e.target&&btn.contains(e.target)) return;
-    ['pointerdown','keydown','touchstart'].forEach(function(n){ document.removeEventListener(n,firstTouch,true); });
-    if(wantSound&&v.muted&&!v.paused&&heroSeen&&!otherPlaying()){ v.muted=false; label(); }
+    if(!e.isTrusted||(navigator.userActivation&&!navigator.userActivation.isActive)) return;
+    ['click','touchend','keydown'].forEach(function(n){ document.removeEventListener(n,firstTouch,true); });
+    if(wantSound&&v.muted&&!v.paused&&heroSeen&&!otherPlaying()){
+      v.muted=false; label();
+      var p=v.play(); /* それでも止められたら、音なしのまま流し続ける */
+      if(p&&p.catch) p.catch(function(){ v.muted=true; label(); v.play().catch(function(){}); });
+    }
   }
-  ['pointerdown','keydown','touchstart'].forEach(function(n){ document.addEventListener(n,firstTouch,true); });
+  ['click','touchend','keydown'].forEach(function(n){ document.addEventListener(n,firstTouch,true); });
   v.addEventListener('ended',showSlides);
   v.addEventListener('error',showSlides,true);
   window.addEventListener('resize',fit);
