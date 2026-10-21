@@ -6257,6 +6257,25 @@ function gpSeek(t){ vmOpen('ask_media/gp_guide.mp4','ask_media/gp_poster.jpg','�
       },{rootMargin:'0px 0px -30% 0px'});
       io.observe(sec);
     }
+    // 記事ごとの閲覧時間（画面の中央にある記事を1秒ずつ数える。60秒操作がなければ数えない）
+    var secs={},last=Date.now();
+    ['scroll','pointerdown','pointermove','keydown','touchstart','wheel'].forEach(function(n){window.addEventListener(n,function(){last=Date.now();},{passive:true});});
+    setInterval(function(){
+      if(document.visibilityState!=='visible'||Date.now()-last>60000) return;
+      var mid=(window.innerHeight||0)/2; if(!mid) return;
+      for(var i=0;i<items.length;i++){
+        var r=items[i].el.getBoundingClientRect();
+        if(r.height&&r.top<=mid&&r.bottom>=mid){ secs[items[i].id]=(secs[items[i].id]||0)+1; break; }
+      }
+    },1000);
+    function flush(){
+      items.forEach(function(it){
+        var n=secs[it.id]||0; if(n<5) return; secs[it.id]=0;
+        try{ if(typeof gtag==='function') gtag('event','blog_read_time',{blog_title:it.title,blog_date:it.date,read_seconds:n,value:n,transport_type:'beacon'}); }catch(e){}
+      });
+    }
+    document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='hidden') flush(); });
+    window.addEventListener('pagehide',flush);
     if(/^#blog-/.test(location.hash)) setTimeout(function(){openArticle(location.hash.slice(1),'link');},300);
   }
   function start(){setTimeout(init,0);}
