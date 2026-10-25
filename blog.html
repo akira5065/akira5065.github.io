@@ -1,242 +1,1442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>散歩日誌 — 新井昭男</title>
-<meta name="description" content="埼玉県比企郡小川町の新井設備工業 代表・新井昭男の散歩日誌。小川町の四季や日々の出来事を綴っています。">
-<link rel="canonical" href="https://akira5065.github.io/blog.html">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>社長ブログ｜株式会社新井設備工業</title>
+<meta name="description" content="埼玉県小川町の株式会社新井設備工業 代表のブログ。現場の工事のこと、小川町の四季、日々のこと。">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230c2540'/%3E%3Cpath d='M20 7c4.6 6 7 10 7 13.3A7 7 0 0 1 13 20.3C13 17 15.4 13 20 7z' fill='%233aa6cf'/%3E%3Cpath d='M6 31h28' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社新井設備工業">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://akira5065.github.io/blog.html">
+<meta property="og:title" content="社長ブログ｜株式会社新井設備工業">
+<meta property="og:description" content="埼玉県小川町の株式会社新井設備工業 代表のブログ。現場の工事のこと、小川町の四季、日々のこと。">
+<meta property="og:image" content="https://akira5065.github.io/img/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="JP-11">
+<meta name="geo.placename" content="埼玉県比企郡小川町">
+<meta name="geo.position" content="36.063171;139.305222">
 <script>
-  // 自社閲覧を数えない設定：?nocount=on で有効、?nocount=off で解除（端末ごとに保存）
-  (function(){try{var q=new URLSearchParams(location.search).get('nocount');
-    if(q==='on')localStorage.setItem('arai_nocount','1');
-    if(q==='off')localStorage.removeItem('arai_nocount');
-    if(localStorage.getItem('arai_nocount')==='1'){window['ga-disable-G-9C9WRX34W8']=true;
-      if(q)alert(q==='on'?'この端末の閲覧は、今後アクセス解析に数えません。':'この端末の閲覧を、再びアクセス解析に数えます。');}
-    else if(q==='off')alert('この端末の閲覧を、再びアクセス解析に数えます。');}catch(e){}})();
+// 自社閲覧を数えない設定：?nocount=on で有効、?nocount=off で解除（端末ごとに保存。今までのページと同じ仕組み）
+(function () { try {
+  var q = new URLSearchParams(location.search).get('nocount');
+  if (q === 'on') localStorage.setItem('arai_nocount', '1');
+  if (q === 'off') localStorage.removeItem('arai_nocount');
+  if (localStorage.getItem('arai_nocount') === '1') window['ga-disable-G-9C9WRX34W8'] = true;
+  if (q === 'on') alert('この端末の閲覧は、今後アクセス解析に数えません。');
+  if (q === 'off') alert('この端末の閲覧を、再びアクセス解析に数えます。');
+} catch (e) {} })();
+// アクセス解析（Google アナリティクス）。公開サイトの上でだけ動かす（手元で確かめるときは数えない）
+if (/github\.io$/.test(location.hostname)) {
+  var ga = document.createElement('script'); ga.async = true;
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-9C9WRX34W8'; document.head.appendChild(ga);
+  window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date()); gtag('config', 'G-9C9WRX34W8');
+}
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C9WRX34W8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9C9WRX34W8');
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#fafaf7;
-    --ink:#2b2a26;
-    --sub:#6b6a63;
-    --line:#d8d6cf;
-    --accent:#5a6b3b;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:"Hiragino Mincho ProN","Yu Mincho","游明朝",serif;
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.85;
-    -webkit-font-smoothing:antialiased;
-  }
-  header{
-    border-bottom:1px solid var(--line);
-    padding:36px 24px 24px;
-    text-align:center;
-  }
-  header h1{
-    margin:0;
-    font-size:1.6rem;
-    letter-spacing:.18em;
-    font-weight:500;
-  }
-  header p{
-    margin:.4rem 0 0;
-    color:var(--sub);
-    font-size:.85rem;
-    letter-spacing:.1em;
-  }
-  main{
-    max-width:760px;
-    margin:0 auto;
-    padding:48px 24px 80px;
-  }
-  article.latest{
-    margin-bottom:64px;
-    padding-bottom:56px;
-    border-bottom:1px solid var(--line);
-  }
-  article.latest:last-of-type{ border-bottom:none; padding-bottom:0; }
-  article h2{
-    font-size:1.35rem;
-    border-left:3px solid var(--accent);
-    padding-left:12px;
-    margin:0 0 8px;
-    font-weight:500;
-    line-height:1.6;
-  }
-  article h2 a{ color:inherit; text-decoration:none; }
-  article h2 a:hover{ color:var(--accent); }
-  .more{
-    text-align:right;
-    font-size:.9rem;
-    letter-spacing:.06em;
-  }
-  .more a{ color:var(--accent); text-decoration:none; }
-  .more a:hover{ text-decoration:underline; }
-  .date{
-    color:var(--sub);
-    font-size:.8rem;
-    letter-spacing:.12em;
-    margin-bottom:28px;
-  }
-  .gallery{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:14px;
-    margin:24px 0 32px;
-  }
-  .gallery img{
-    width:100%;
-    height:auto;
-    border:1px solid var(--line);
-    border-radius:2px;
-    display:block;
-  }
-  p{margin:0 0 1.2em; text-align:justify}
-  .lead::first-letter{
-    font-size:2.2em;
-    float:left;
-    line-height:1;
-    padding:4px 8px 0 0;
-    color:var(--accent);
-  }
-  blockquote{
-    border-left:2px solid var(--line);
-    margin:1.4em 0;
-    padding:.2em 1em;
-    color:var(--sub);
-    font-style:italic;
-  }
-  .archive-section{
-    border-top:1px solid var(--line);
-    padding-top:32px;
-  }
-  .archive-section h3{
-    font-size:1rem;
-    letter-spacing:.18em;
-    color:var(--sub);
-    font-weight:500;
-    margin:0 0 16px;
-  }
-  .archive-list{ list-style:none; padding:0; margin:0; }
-  .archive-list li{
-    padding:10px 0;
-    border-bottom:1px dotted var(--line);
-    display:flex;
-    gap:16px;
-    align-items:baseline;
-  }
-  .archive-list .d{
-    color:var(--sub);
-    font-size:.8rem;
-    letter-spacing:.08em;
-    min-width:6em;
-  }
-  .archive-list a{ color:var(--ink); text-decoration:none; }
-  .archive-list a:hover{ color:var(--accent); }
-  .archive-empty{
-    color:var(--sub);
-    font-size:.85rem;
-    font-style:italic;
-  }
-  footer{
-    text-align:center;
-    color:var(--sub);
-    font-size:.75rem;
-    padding:24px;
-    border-top:1px solid var(--line);
-    letter-spacing:.1em;
-  }
+:root{
+  --ink:#13202e; --sub:#51606f; --mute:#7a8794;
+  --navy:#0c2540; --navy2:#123557; --blue:#1c6fb5; --aqua:#3aa6cf;
+  --sand:#f5f3ee; --paper:#ffffff; --line:#e1e6ec;
+  --setsubi:#16867a; --suido:#1c6fb5; --doboku:#a5722a;
+  --tbd-bg:#fff0a0; --tbd-ink:#5f4a00;
+  --radius:14px; --max:1160px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.mincho,h1,h2{font-family:"Shippori Mincho","Yu Mincho",serif;font-weight:700}
+.en{font-family:Inter,sans-serif;letter-spacing:.18em;font-size:12px;font-weight:600;text-transform:uppercase}
+.tbd{background:var(--tbd-bg);color:var(--tbd-ink);padding:.05em .4em;border-radius:4px;font-size:.88em;font-weight:500}
+.note{font-size:13px;color:var(--mute)}
+
+/* 仮ページの帯 */
+.draft-bar{background:#fff7cc;border-bottom:1px solid #ecd97a;color:#5f4a00;font-size:13px;line-height:1.6;padding:8px 20px;text-align:center}
+
+/* ヘッダー */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand b{display:block;font-size:17px;letter-spacing:.04em;white-space:nowrap}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.16em;color:var(--mute);white-space:nowrap}
+.gnav{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:500}
+.gnav a{text-decoration:none;color:var(--sub)}
+.gnav a:hover{color:var(--blue)}
+.head-tel{display:flex;flex-direction:column;align-items:flex-end;text-decoration:none;line-height:1.2;margin-left:8px}
+.head-tel b{font-family:Inter,sans-serif;font-size:20px;color:var(--navy);letter-spacing:.02em}
+.head-tel span{font-size:11px;color:var(--mute)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit;font-size:13px}
+@media (max-width:1120px){
+  .gnav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);margin:0}
+  .gnav.open{display:flex}
+  .gnav a{padding:14px 20px;border-top:1px solid var(--line)}
+  .menu-btn{display:block}
+  .head-tel{display:none}
+}
+
+/* ボタン */
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;padding:14px 26px;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.btn-blue{background:var(--blue);color:#fff}
+
+/* 1画面目 */
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#1d4a77 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,#0a1e33 100%);color:#fff;padding:64px 0 96px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero .eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:#cfe3f5;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 14px}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.3;margin:22px 0 18px;letter-spacing:.04em}
+.hero .lead{color:#d6e3ef;font-size:16px;max-width:34em;margin:0 0 30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-cta .tel-big{display:flex;flex-direction:column;line-height:1.25}
+.hero-cta .tel-big b{font-family:Inter,sans-serif;font-size:22px}
+.hero-cta .tel-big span{font-size:11px;font-weight:500;color:#5b6b7b}
+.cm-link{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:#d6e3ef;font-size:14px;text-decoration:none}
+.cm-link .pl{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.5);font-size:11px;padding-left:2px}
+.cm-link:hover{color:#fff}
+.seals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.seal{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);border-radius:10px;padding:10px 12px;font-size:12px;line-height:1.5;color:#c9d9e8}
+.seal b{display:block;color:#fff;font-size:13px;margin-top:2px}
+.hero-media{position:relative}
+.hero-media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.hero-media figcaption{position:absolute;right:14px;bottom:12px;font-size:11px;color:#fff;background:rgba(0,0,0,.45);padding:2px 10px;border-radius:999px}
+.hero-float{position:absolute;left:-28px;bottom:-30px;background:#fff;color:var(--ink);border-radius:14px;padding:14px 18px;box-shadow:0 16px 40px rgba(0,0,0,.25);display:flex;gap:12px;align-items:center;max-width:360px}
+.hero-float .num{font-family:Inter,sans-serif;font-weight:700;font-size:30px;color:var(--blue);line-height:1;white-space:nowrap}
+.hero-float p{margin:0;font-size:13px;line-height:1.5}
+@media (max-width:900px){
+  .hero{padding:40px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-media{order:-1}
+  .hero-float{left:12px;bottom:-26px}
+  .seals{grid-template-columns:1fr}
+}
+
+/* 見出し */
+.sec{padding:96px 0}
+.sec.sand{background:var(--sand)}
+.sec-head{margin-bottom:44px;max-width:720px}
+.sec-head .en{color:var(--blue)}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);line-height:1.4;margin:6px 0 12px;letter-spacing:.03em}
+.sec-head p{color:var(--sub);margin:0}
+@media (max-width:700px){.sec{padding:64px 0}}
+
+/* 3つの入口 */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:-56px;position:relative;z-index:2}
+.door{background:#fff;border-radius:var(--radius);padding:26px 26px 22px;box-shadow:0 10px 30px rgba(12,37,64,.10);border-top:4px solid var(--blue);display:flex;flex-direction:column}
+.door:nth-child(2){border-top-color:var(--navy)}
+.door:nth-child(3){border-top-color:var(--doboku)}
+.door .who{font-size:12px;color:var(--mute);font-weight:500}
+.door h3{margin:2px 0 8px;font-size:20px}
+.door p{margin:0 0 14px;color:var(--sub);font-size:14px}
+.door ul{list-style:none;margin:auto 0 0;padding:0;border-top:1px solid var(--line)}
+.door li a{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:14px;font-weight:500}
+.door li a::after{content:"→";color:var(--blue)}
+@media (max-width:900px){.doors{grid-template-columns:1fr;margin-top:-36px}}
+
+/* お困りごと */
+.trouble{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start}
+.t-card .ico{flex:none;width:48px;height:48px;border-radius:12px;background:#e8f2fb;color:var(--blue);display:grid;place-items:center}
+.t-card h3{margin:0 0 4px;font-size:17px}
+.t-card p{margin:0;font-size:14px;color:var(--sub);line-height:1.7}
+.free-line{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;background:#fff;border:1px dashed #b9cde0;border-radius:var(--radius);padding:16px 22px;font-size:14px}
+.free-line b{color:var(--navy)}
+@media (max-width:900px){.trouble{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.trouble{grid-template-columns:1fr}}
+
+/* 3本柱 */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pillar{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.pillar img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.pillar .body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.pillar .tag{display:inline-flex;gap:8px;align-items:baseline;font-weight:700;color:var(--c)}
+.pillar .tag .en{font-size:11px;color:var(--c)}
+.pillar h3{font-family:"Shippori Mincho",serif;font-size:21px;margin:6px 0 12px;line-height:1.5}
+.pillar ul{margin:0 0 16px;padding-left:1.1em;font-size:14px;color:var(--sub)}
+.pillar ul li{margin:2px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font-size:12px;border-radius:999px;padding:3px 10px;background:color-mix(in srgb,var(--c) 10%,white);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 30%,white)}
+.p-setsubi{--c:var(--setsubi)} .p-suido{--c:var(--suido)} .p-doboku{--c:var(--doboku)}
+.pillar{border-top:4px solid var(--c)}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
+
+/* 動画（CM・会社紹介） */
+.movie-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:44px;align-items:center}
+.movie-grid h2{font-size:clamp(26px,3.4vw,38px);line-height:1.4;margin:6px 0 14px;letter-spacing:.04em}
+.movie-grid .en{color:var(--blue)}
+.movie-grid p{color:var(--sub);margin:0 0 22px}
+.v-list{display:flex;flex-direction:column;gap:10px}
+.v-item{display:flex;gap:14px;align-items:center;text-align:left;font:inherit;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;cursor:pointer;color:var(--ink)}
+.v-item img{width:112px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;flex:none}
+.v-item b{display:block;font-size:14px}
+.v-item span{font-size:12px;color:var(--mute);line-height:1.6}
+.v-item.on{border-color:var(--blue);box-shadow:0 0 0 2px rgba(28,111,181,.15)}
+.player{position:relative;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 24px 50px rgba(12,37,64,.25)}
+.player video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.player .ttl{position:absolute;left:14px;top:12px;font-size:12px;color:#fff;background:rgba(0,0,0,.45);border-radius:999px;padding:2px 12px;pointer-events:none}
+@media (max-width:900px){.movie-grid{grid-template-columns:1fr;gap:24px}.movie-grid .player{order:-1}}
+
+/* 数字 */
+.numbers{background:linear-gradient(rgba(10,30,51,.88),rgba(10,30,51,.92)),url(img/trench_worker.jpg) center/cover;color:#fff;padding:64px 0}
+.num-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.num{border-left:1px solid rgba(255,255,255,.2);padding:4px 18px}
+.num:first-child{border-left:0}
+.num .v{font-family:Inter,sans-serif;font-weight:700;font-size:44px;line-height:1.1}
+.num .v small{font-size:16px;font-weight:600;margin-left:4px;font-family:"Noto Sans JP",sans-serif}
+.num p{margin:6px 0 0;font-size:13px;color:#c9d9e8;line-height:1.55}
+@media (max-width:900px){.num-grid{grid-template-columns:1fr 1fr}.num{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:14px 4px}}
+
+/* 公共工事 */
+.pw-tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+.pw-tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;cursor:pointer}
+.pw-tools button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pw-tools .count{margin-left:auto;font-size:13px;color:var(--mute)}
+.pw{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);font-size:14px}
+.pw th{background:#eef3f8;text-align:left;font-weight:700;padding:12px 16px;font-size:13px;color:var(--sub)}
+.pw td{padding:13px 16px;border-top:1px solid var(--line);vertical-align:top}
+.pw td.y{white-space:nowrap;font-family:Inter,sans-serif;font-weight:600;color:var(--navy)}
+.kind{display:inline-block;font-size:12px;border-radius:6px;padding:1px 8px;white-space:nowrap}
+.kind.jo{background:#e6f0fa;color:var(--suido)}
+.kind.ge{background:#f3ece0;color:var(--doboku)}
+.pw th,.pw td.o{white-space:nowrap}
+.pw th.m,.pw td.m{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pw td.m{font-family:Inter,"Noto Sans JP",sans-serif}
+.diff{font-weight:700;color:var(--navy)}
+.diff.z{color:var(--setsubi)}
+.diff small{display:block;font-weight:400;font-size:11px;color:var(--mute);font-family:"Noto Sans JP",sans-serif}
+.pw.collapsed tr.extra{display:none}
+.pw-more{display:block;margin:16px auto 0;font:inherit;font-size:14px;background:#fff;border:1px solid var(--navy);color:var(--navy);border-radius:999px;padding:10px 26px;cursor:pointer}
+@media (max-width:700px){
+  .pw thead{display:none}
+  .pw,.pw tbody,.pw tr,.pw td{display:block;width:100%}
+  .pw tr{border-top:1px solid var(--line);padding:10px 14px}
+  .pw td{border:0;padding:2px 0}
+  .pw td.o{font-size:12px;color:var(--mute)}
+  .pw td.m{text-align:left;display:flex;justify-content:space-between;gap:12px;border-top:1px dashed var(--line);padding:4px 0}
+  .pw td.m::before{content:attr(data-label);color:var(--mute);font-size:12px;font-family:"Noto Sans JP",sans-serif;font-weight:400}
+  .diff small{display:inline;margin-left:6px}
+}
+
+/* 施工事例 */
+.works{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.w-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.w-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.w-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.w-card div{padding:10px 12px 12px;font-size:13px;line-height:1.55}
+.w-card b{display:block;font-size:14px}
+.w-card .k{font-size:11px;font-weight:700}
+.k.s{color:var(--setsubi)} .k.w{color:var(--suido)} .k.d{color:var(--doboku)}
+.recent{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.recent h3{margin:0 0 6px;font-size:16px}
+.recent ul{list-style:none;margin:0;padding:0}
+.recent li{padding:10px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.6}
+.recent li span{display:block;font-size:12px;color:var(--mute)}
+@media (max-width:900px){.works{grid-template-columns:1fr}.w-grid{grid-template-columns:1fr 1fr}}
+
+/* 流れ */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:st}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;position:relative}
+.step::before{counter-increment:st;content:"STEP " counter(st);font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;color:var(--blue);font-weight:700}
+.step h3{margin:4px 0 6px;font-size:16px}
+.step p{margin:0;font-size:13px;color:var(--sub);line-height:1.7}
+@media (max-width:900px){.flow{grid-template-columns:1fr}}
+
+/* 強み */
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.reason{display:grid;grid-template-columns:auto 1fr;gap:18px;background:#fff;border-radius:var(--radius);padding:26px;border:1px solid var(--line)}
+.reason .n{font-family:Inter,sans-serif;font-weight:700;font-size:34px;color:#c8d6e4;line-height:1}
+.reason h3{margin:0 0 8px;font-size:18px}
+.reason p{margin:0;font-size:14px;color:var(--sub)}
+@media (max-width:800px){.reasons{grid-template-columns:1fr}}
+
+/* 技術 */
+.tech{background:linear-gradient(160deg,#0f2d4b,#0a1e33);color:#fff}
+.tech .sec-head .en{color:var(--aqua)}
+.tech .sec-head p{color:#c9d9e8}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tc{display:block;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:24px;background:rgba(255,255,255,.04);transition:border-color .2s,background .2s}
+a.tc:hover{border-color:var(--aqua);background:rgba(255,255,255,.08)}
+.tc .en{color:var(--aqua);font-size:11px}
+.tc h3{margin:6px 0 10px;font-size:18px}
+.tc .stat{font-family:Inter,"Noto Sans JP",sans-serif;font-size:14px;color:#fff;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);padding:8px 0;margin-bottom:10px}
+.tc .stat b{font-size:22px;margin-right:2px}
+.tc p{margin:0;font-size:13px;color:#c9d9e8;line-height:1.75}
+.tech .more{display:inline-block;margin-top:26px;color:#fff;font-size:14px}
+@media (max-width:900px){.tech-grid{grid-template-columns:1fr}}
+
+/* 重機 */
+.eq{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.eq figure{margin:0;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.eq img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.eq figcaption{padding:8px 12px;font-size:13px;line-height:1.5}
+.eq figcaption span{display:block;font-size:11px;color:var(--mute)}
+@media (max-width:800px){.eq{grid-template-columns:1fr 1fr}}
+
+/* エリア */
+.area{background:linear-gradient(rgba(12,37,64,.80),rgba(12,37,64,.86)),url(img/area_river.jpg) center/cover;color:#fff}
+.area .sec-head .en{color:var(--aqua)}
+.area .sec-head p{color:#d6e3ef}
+.towns{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.town{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px}
+.town b{display:block;font-size:16px}
+.town span{font-size:12px;color:#c9d9e8}
+.town.home{background:#fff;color:var(--navy)}
+.town.home span{color:var(--sub)}
+@media (max-width:900px){.towns{grid-template-columns:1fr 1fr}}
+
+/* 採用 */
+.recruit{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+.rc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.rc h3{margin:0 0 12px;font-size:19px}
+.rc dl{display:grid;grid-template-columns:7.5em 1fr;margin:0;font-size:14px}
+.rc dt{color:var(--mute);padding:9px 0;border-top:1px solid var(--line)}
+.rc dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+@media (max-width:900px){.recruit{grid-template-columns:1fr}}
+
+/* 会社概要 */
+.company{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.ctable{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+.ctable th{width:8.5em;text-align:left;color:var(--sub);font-weight:500;padding:12px 10px;border-top:1px solid var(--line);vertical-align:top}
+.ctable td{padding:12px 10px;border-top:1px solid var(--line)}
+.ctable tr:last-child th,.ctable tr:last-child td{border-bottom:1px solid var(--line)}
+.message{background:var(--sand);border-radius:var(--radius);padding:28px}
+.message h3{font-family:"Shippori Mincho",serif;font-size:21px;margin:0 0 12px;line-height:1.6}
+.message p{font-size:14px;color:var(--sub);margin:0 0 10px}
+.message .sign{text-align:right;color:var(--ink);font-weight:500}
+@media (max-width:900px){.company{grid-template-columns:1fr}}
+
+/* 社長ブログ（トップ） */
+.blog-top{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bt-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:inherit}
+.bt-card:hover{box-shadow:0 10px 26px rgba(12,37,64,.10)}
+.bt-card img{aspect-ratio:16/10;object-fit:cover;width:100%;background:#e9eef3}
+.bt-card .tx{padding:14px 16px 18px}
+.bt-card .meta{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mute)}
+.bt-card .meta .d{font-family:Inter,sans-serif;font-weight:600;color:var(--navy)}
+.bt-card h3{font-size:16px;line-height:1.55;margin:6px 0 4px}
+.bt-card p{font-size:13px;color:var(--sub);margin:0;line-height:1.7}
+.cat{font-size:11px;font-weight:700;border-radius:6px;padding:1px 8px}
+.cat.kouji{background:#e6f0fa;color:var(--suido)}
+.cat.shiki{background:#e5f3ef;color:var(--setsubi)}
+.cat.hibi{background:#f3ece0;color:var(--doboku)}
+.blog-more{display:flex;justify-content:center;margin-top:26px}
+.blog-more a{border:1px solid var(--navy);color:var(--navy);border-radius:999px;padding:10px 28px;text-decoration:none;font-size:14px;font-weight:500;background:#fff}
+.recent a{text-decoration:none}
+.recent a:hover{color:var(--blue)}
+@media (max-width:900px){.blog-top{grid-template-columns:1fr}}
+
+/* よくある質問 */
+.faq{max-width:860px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.faq summary{cursor:pointer;padding:16px 20px;font-weight:700;list-style:none;display:flex;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:Inter,sans-serif;color:var(--blue)}
+.faq details p{margin:0;padding:0 20px 18px 46px;color:var(--sub);font-size:14px}
+
+/* お問い合わせ */
+.contact{background:var(--navy);color:#fff}
+.contact .sec-head .en{color:var(--aqua)}
+.contact .sec-head p{color:#c9d9e8}
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:28px}
+.c-info{display:flex;flex-direction:column;gap:14px}
+.c-tel{background:#fff;color:var(--navy);border-radius:var(--radius);padding:22px 24px;text-decoration:none;display:block}
+.c-tel span{font-size:13px;color:var(--sub)}
+.c-tel b{display:block;font-family:Inter,sans-serif;font-size:34px;line-height:1.2;margin:2px 0}
+.c-row{border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 18px;font-size:14px;color:#d6e3ef}
+.c-row b{color:#fff;margin-right:8px}
+.c-form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px}
+.c-form h3{margin:0 0 14px;font-size:18px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.c-form label{display:block;font-size:13px;font-weight:500;margin-bottom:12px}
+.c-form label em{color:#c0392b;font-style:normal;margin-left:4px}
+.c-form input,.c-form select,.c-form textarea{display:block;width:100%;margin-top:4px;font:inherit;font-size:15px;border:1px solid #cbd5df;border-radius:8px;padding:10px 12px;background:#fff}
+.c-form textarea{min-height:110px;resize:vertical}
+.c-form .btn{width:100%;justify-content:center;margin-top:6px}
+@media (max-width:900px){.c-grid{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}}
+
+/* フッター */
+footer{background:#081a2c;color:#9fb2c4;font-size:13px;padding:40px 0 100px}
+footer .container{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between}
+footer b{color:#fff;font-size:15px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer nav a{text-decoration:none}
+
+/* スマホの下の電話バー */
+.sp-bar{display:none}
+@media (max-width:800px){
+  .sp-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -6px 20px rgba(0,0,0,.15)}
+  .sp-bar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 8px;font-weight:700;text-decoration:none;font-size:15px}
+  .sp-bar .t{background:var(--blue);color:#fff}
+  .sp-bar .m{background:#fff;color:var(--navy)}
+}
+
+/* ===== 社長ブログ ===== */
+.blog-hero{background:linear-gradient(160deg,var(--navy) 0%,#0a1e33 100%);color:#fff;padding:56px 0 48px}
+.blog-hero h1{font-size:clamp(30px,4.4vw,46px);margin:8px 0 10px;letter-spacing:.06em}
+.blog-hero p{color:#d6e3ef;margin:0;max-width:40em}
+.blog-hero .en{color:var(--aqua)}
+.b-tools{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px;align-items:center}
+.b-tools button{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;cursor:pointer}
+.b-tools button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.b-tools .count{margin-left:auto;font-size:13px;color:var(--mute)}
+.b-index{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.b-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:inherit}
+.b-card:hover{box-shadow:0 10px 26px rgba(12,37,64,.10)}
+.b-card .ph{aspect-ratio:16/10;background:#e9eef3 center/cover no-repeat;position:relative}
+.b-card .ph.none{display:grid;place-items:center;color:#8aa0b5;font-size:13px}
+.b-card .ph .mv{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;border-radius:999px;padding:2px 10px}
+.b-card .tx{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
+.b-card h3{font-size:16px;line-height:1.55;margin:0}
+.b-card p{font-size:13px;color:var(--sub);margin:0;line-height:1.7}
+.b-meta{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mute)}
+.b-meta .d{font-family:Inter,sans-serif;font-weight:600;color:var(--navy)}
+.cat{font-size:11px;font-weight:700;border-radius:6px;padding:1px 8px}
+.cat.kouji{background:#e6f0fa;color:var(--suido)}
+.cat.shiki{background:#e5f3ef;color:var(--setsubi)}
+.cat.hibi{background:#f3ece0;color:var(--doboku)}
+.b-posts{max-width:780px;margin:0 auto}
+.b-post{padding:56px 0;border-top:1px solid var(--line)}
+.b-post h2{font-size:clamp(22px,3vw,30px);line-height:1.5;margin:10px 0 24px;letter-spacing:.02em}
+.b-post .b-body{font-size:16px;line-height:2}
+.b-post .b-body p{margin:0 0 1.2em}
+.b-post .b-body h4{font-size:18px;margin:2em 0 .6em}
+.b-post .b-body img,.b-post .b-body video{width:100%;height:auto;border-radius:10px;background:#000}
+.blog-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:24px 0 6px}
+.blog-photo-single{margin:24px 0 6px}
+.photo-caption{text-align:center;font-size:13px;color:var(--mute);margin:6px 0 24px!important}
+.blog-separator{width:56px;height:3px;background:linear-gradient(90deg,var(--blue),var(--aqua));margin:40px auto;border-radius:2px}
+.blog-video-wrap{margin:24px 0;border-radius:12px;overflow:hidden}
+.b-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.b-tags span{font-size:12px;background:var(--sand);border-radius:999px;padding:2px 10px;color:var(--sub)}
+.b-back{display:inline-block;margin-top:22px;font-size:13px;color:var(--blue)}
+@media (max-width:900px){.b-index{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.b-index{grid-template-columns:1fr}.b-post{padding:40px 0}}
 </style>
 </head>
 <body>
-
-<header>
-  <h1>散 歩 日 誌</h1>
-  <p>Promenades Quotidiennes &nbsp;·&nbsp; by 新井昭男</p>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="株式会社新井設備工業 トップへ">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#0c2540"/>
+        <path d="M20 7c4.6 6 7 10 7 13.3A7 7 0 0 1 13 20.3C13 17 15.4 13 20 7z" fill="#3aa6cf"/>
+        <path d="M6 31h28" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M6 31h9" stroke="#c99a4b" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span><b>株式会社新井設備工業</b><small>ARAI SETSUBI KOGYO</small></span>
+    </a>
+    <nav class="gnav" id="gnav">
+      <a href="index.html#services">事業内容</a>
+      <a href="index.html#public">公共工事の実績</a>
+      <a href="index.html#works">施工事例</a>
+      <a href="index.html#movie">動画</a>
+      <a href="blog.html" style="color:var(--blue)">社長ブログ</a>
+      <a href="index.html#company">会社概要</a>
+      <a href="index.html#contact">お問い合わせ</a>
+    </nav>
+    <a class="head-tel" href="tel:0493725923"><b>0493-72-5923</b><span>8:00〜18:00（日・祝休み）</span></a>
+    <button class="menu-btn" type="button" aria-controls="gnav" aria-expanded="false" id="menuBtn">メニュー</button>
+  </div>
 </header>
 
-<main>
-
-  <article class="latest">
-    <h2><a href="blog-20260815.html">秋の兆し ── 小川町の、八月十五日</a></h2>
-    <div class="date">2026.08.15 &nbsp;|&nbsp; 終戦記念日</div>
-
-    <div class="gallery">
-      <img src="S__31940614_0.jpg" alt="台風後、増水した市ノ川">
-      <img src="S__31940615_0_rot180.jpg" alt="いただいたスイカ">
+<main id="top">
+<section class="blog-hero">
+  <div class="container">
+    <span class="en">President's blog</span>
+    <h1>社長ブログ</h1>
+    <p>小川町の現場から。工事のこと、比企の四季、日々のこと。代表 新井 昭男が綴ります。</p>
+  </div>
+</section>
+<section class="sec" style="padding-top:0">
+  <div class="container">
+    <div class="b-tools" role="group" aria-label="分類で絞り込む">
+      <button type="button" data-k="all" class="on">すべて（16）</button>
+      <button type="button" data-k="kouji">工事のこと（8）</button>
+      <button type="button" data-k="shiki">小川町の四季（4）</button>
+      <button type="button" data-k="hibi">日々のこと（4）</button>
+      <span class="count" id="bCount">16件</span>
     </div>
-
-    <p class="lead">
-      台風が抜けた翌朝、いつもの散歩道を歩いた。橋の上に立つと、市ノ川が濁っていた。普段は底の石が見えるほどの流れが、茶色く重たい水になって、音を立てて下っていく。ほんの数日前まで、静かな川だったはずである。
-    </p>
-
-    <p>
-      顔を上げれば、空はもう嘘のように晴れている。ただ、雲の輪郭が、少し前とは変わったように思う。真夏の入道雲は空の低いところで沸き立っていたが、この日の雲は、ずいぶん高いところを流れていた。夕方には、どこかでひぐらしが鳴いていた。八月十五日である。まだ暑い。それでも、秋はもう、山のほうから降りてきている。
-    </p>
-
-    <p>
-      散歩コースのヤギに子が生まれていたこと。数十年前に遊就館で読んだ、特攻に発つ前の若者たちの遺書のこと。そして夕方、八十近いご近所の方が、おぼつかない足取りで大きなスイカを運んでくださったこと。この日に考えたことを、少し長く書いた。
-    </p>
-
-    <p class="more">→ <a href="blog-20260815.html">続きを読む</a></p>
-  </article>
-
-  <article class="latest">
-    <h2>夕雲のもと、田畑をめぐる</h2>
-    <div class="date">2026.04.27 &nbsp;|&nbsp; 春の夕</div>
-
-    <div class="gallery">
-      <img src="S__26460169_0.jpg" alt="新緑の森と耕された田">
-      <img src="S__26460170_0.jpg" alt="夕陽さす里道と速度標識">
-      <img src="S__26460171_0.jpg" alt="うねる雲と春の集落">
+    <div class="b-index">
+<a class="b-card" href="#post-20261024" data-cat="hibi"><span class="ph" style="background-image:url('https://akira5065.github.io/blog_media/sanpo_2026_10_01_nodo.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.10.24</span><span class="cat hibi">日々のこと</span></span><h3>七時半の散歩 ── 母のこと、三十年の管のこと</h3><p>五十七歳になった。四捨五入すれば還暦である。…</p></span></a>
+<a class="b-card" href="#post-20260917" data-cat="kouji"><span class="ph" style="background-image:url('https://akira5065.github.io/blog_media/blog04_genba.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.09.17</span><span class="cat kouji">工事のこと</span></span><h3>あおりのシートを張り替える ── 盆明け、片道一時間半の現場で</h3><p>盆が明けた八月十七日から、埼玉県のある市の現場に通っている。片道、一時間半。小川町を出るころはまだ薄暗く、着くころには日がすっかり高くなっている…</p></span></a>
+<a class="b-card" href="#post-20260815" data-cat="shiki"><span class="ph" style="background-image:url('https://akira5065.github.io/S__31940614_0.jpg')"><span class="mv">▶ 動画あり</span></span><span class="tx"><span class="b-meta"><span class="d">2026.08.15</span><span class="cat shiki">小川町の四季</span></span><h3>秋の兆し ── 小川町の、八月十五日</h3><p>台風が抜けた翌朝、いつもの散歩道を歩いた。橋の上に立つと、市ノ川が濁っていた。普段は底の石が見えるほどの流れが、茶色く重たい水になって、音を立て…</p></span></a>
+<a class="b-card" href="#post-20260728" data-cat="hibi"><span class="ph" style="background-image:url('https://akira5065.github.io/taishi_01_hopper_retsu.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.07.28</span><span class="cat hibi">日々のこと</span></span><h3>太子線の記憶 ── 草津の帰りに、深い森の廃駅を訪ねて</h3><p>草津温泉からの帰路、ふと立ち寄った群馬県長野原町の「旧太子（おおし）駅」。かつて国鉄太子線の終着駅であった場所は、いま静かな鉄道公園として時を止…</p></span></a>
+<a class="b-card" href="#post-20260726" data-cat="kouji"><span class="ph" style="background-image:url('https://akira5065.github.io/toilet_2026_07_b1.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.07.26</span><span class="cat kouji">工事のこと</span></span><h3>一枚のタイルに、三十年の御礼を ── 小川町・浄化槽転換とトイレ水洗化の記</h3><p>この七月二十五日、小川町のN様邸より、浄化槽転換工事に伴うトイレ水洗化工事を受注させていただきました。まずもって、数ある業者の中から当社をお選び…</p></span></a>
+<a class="b-card" href="#post-20260706" data-cat="hibi"><span class="ph" style="background-image:url('https://akira5065.github.io/kuu_chan_illust_2026_07_06.png')"><span class="mv">▶ 動画あり</span></span><span class="tx"><span class="b-meta"><span class="d">2026.07.06</span><span class="cat hibi">日々のこと</span></span><h3>クゥーちゃんへ ── 十六年の生涯と、ひとつの再会に寄せて</h3><p>七月一日、一匹の猫が静かにその生涯を閉じました。名はクゥー。十六歳でした。…</p></span></a>
+<a class="b-card" href="#post-20260615" data-cat="kouji"><span class="ph" style="background-image:url('https://akira5065.github.io/shimosato_01_zenkei.jpg')"><span class="mv">▶ 動画あり</span></span><span class="tx"><span class="b-meta"><span class="d">2026.06.15</span><span class="cat kouji">工事のこと</span></span><h3>日本有機農業の原点・霜里農場で、漏水修理を行いました ── 十数年来のご縁に支えられて</h3><p>本日は、十数年以上にわたってお世話になっている、埼玉県比企郡小川町下里の霜里農場さんへ、漏水修理でお伺いした。設備屋にとって「長いお付き合いの現…</p></span></a>
+<a class="b-card" href="#post-20260603" data-cat="hibi"><span class="ph none">▶ 動画の記事</span><span class="tx"><span class="b-meta"><span class="d">2026.06.03</span><span class="cat hibi">日々のこと</span></span><h3>在りし日の午後 ── 雷魚と、平日昼間の哲学について</h3><p>本日は、いささか趣を変えて、十年ほど前の映像を一本、書庫の奥から引っぱり出してきた。お見苦しい点はあらかじめお詫び申し上げる。…</p></span></a>
+<a class="b-card" href="#post-20260603-b" data-cat="kouji"><span class="ph none">▶ 動画の記事</span><span class="tx"><span class="b-meta"><span class="d">2026.06.03</span><span class="cat kouji">工事のこと</span></span><h3>社長、地底へ降りる ── 一酸化炭素と湧水と、頭上で観測に勤しむ三賢者の図</h3><p>埼玉県吉見浄水場、発注工事。午前のうちに「マンホール蓋まわりの舗装修繕」が、われながら惚れ惚れするほど端正に仕上がった。職人たる者、ここで「本日…</p></span></a>
+<a class="b-card" href="#post-20260514" data-cat="kouji"><span class="ph none">▶ 動画の記事</span><span class="tx"><span class="b-meta"><span class="d">2026.05.14</span><span class="cat kouji">工事のこと</span></span><h3>新築工事 終盤戦 ── せせらぎ、エコ給湯、そして謎の巨大キノコ</h3><p>新築工事も、いよいよ終盤戦に差しかかってきた。今日の任務は二つ。一つはエコキュート給湯機の取り付けに伴う給湯・配水管の接続。もう一つは、浄化槽上…</p></span></a>
+<a class="b-card" href="#post-20260504" data-cat="shiki"><span class="ph" style="background-image:url('https://akira5065.github.io/walk_2026_05_01.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.05.04</span><span class="cat shiki">小川町の四季</span></span><h3>初夏の散歩日誌 ── 嵐山町シンボル林の小さな旅人たち</h3><p>五月。空気が澄んで、風がやわらかい。気がつけば春の桜はすっかり葉桜となり、代わって里のあちらこちらで濃いピンクのツツジが顔を出している。今年もい…</p></span></a>
+<a class="b-card" href="#post-20260428" data-cat="kouji"><span class="ph none">文章の記事</span><span class="tx"><span class="b-meta"><span class="d">2026.04.28</span><span class="cat kouji">工事のこと</span></span><h3>嵐山町の給排水設備工事 ── 古い配管の全面更新</h3><p>先日、比企郡嵐山町（らんざんまち）にて、築40年以上のお宅の給排水設備工事を完了いたしました。武蔵嵐山駅からほど近い住宅街、長年お住まいの一戸建…</p></span></a>
+<a class="b-card" href="#post-20260427" data-cat="shiki"><span class="ph" style="background-image:url('https://akira5065.github.io/S__26460169_0.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.04.27</span><span class="cat shiki">小川町の四季</span></span><h3>夕雲のもと、田畑をめぐる ── 通学路だった道を、ふたたび歩いて</h3><p>今日もまた、足の向くままに里を歩いた。新緑が日に日に厚みを増し、丘陵の稜線をやわらかく覆っている。耕されたばかりの田は、まだ水を湛えていない。黒…</p></span></a>
+<a class="b-card" href="#post-20260415" data-cat="kouji"><span class="ph" style="background-image:url('https://akira5065.github.io/img/ba000e248186.jpg')"></span><span class="tx"><span class="b-meta"><span class="d">2026.04.15</span><span class="cat kouji">工事のこと</span></span><h3>浄化槽まわり外構工事 完了 ── ビフォーアフターでご紹介</h3><p>今回は、新築住宅の浄化槽まわり外構工事をご依頼いただきました。ミニショベルで丁寧に掘削し、浄化槽本体とマンホール蓋の高さをレベルで揃えたうえで、…</p></span></a>
+<a class="b-card" href="#post-20260412" data-cat="shiki"><span class="ph" style="background-image:url('https://akira5065.github.io/img/1efa4b47163a.jpg')"><span class="mv">▶ 動画あり</span></span><span class="tx"><span class="b-meta"><span class="d">2026.04.12</span><span class="cat shiki">小川町の四季</span></span><h3>春爛漫の小川町 ── 菜の花街道と、春の珍客について</h3><p>四月に入り、小川町の河川沿いに広がる菜の花が一斉に咲き誇った。道路の両脇を黄金色の絨毯が覆い尽くすこの光景は、毎年のことながら実に壮観である。ア…</p></span></a>
+<a class="b-card" href="#post-20260410" data-cat="kouji"><span class="ph none">文章の記事</span><span class="tx"><span class="b-meta"><span class="d">2026.04.10</span><span class="cat kouji">工事のこと</span></span><h3>ときがわ町の井戸ポンプ交換 ── 山間地域の暮らしを支える</h3><p>比企郡ときがわ町（ときがわまち）の山間部にあるお宅から、「井戸の水が出なくなった」とのご連絡をいただき、緊急対応で井戸ポンプの点検・交換工事を行…</p></span></a>
     </div>
+    <div class="b-posts">
+<article class="b-post" id="post-20261024" data-cat="hibi"><div class="b-meta"><span class="d">2026.10.24</span><span class="cat hibi">日々のこと</span></div><h2>七時半の散歩 ── 母のこと、三十年の管のこと</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>五十七歳になった。四捨五入すれば還暦である。</p>
 
-    <p class="lead">
-      今日もまた、足の向くままに里を歩いた。新緑が日に日に厚みを増し、丘陵の稜線をやわらかく覆っている。耕されたばかりの田は、まだ水を湛えていない。黒々と濡れた土の畝が、そこに播かれるべき未来の稲穂を、静かに待っているようであった。
-    </p>
+        <p>小学生のころの通学路を、ときどき歩く。夏のにおい、秋の風の渡り方。懐かしいとは思わない。あの日のままそこにある、としか言いようがない。変わったのは道ではなく、歩いているこちらのほうだ。</p>
 
-    <p>
-      空には灰青の雲が幾重にも重なり、その隙間から斜めの光が差し込んでいる。散歩というささやかな営みが、これほどまでに豊かな景色を私に贈ってくれることを、私はしばしば忘れてしまう。歩くという行為は、目的地に至るための手段ではない。歩いている、その歩幅と呼吸のあいだに、世界がふと立ち現れる――そう言ったのは確か、あるフランスの哲学者であった。
-    </p>
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_01_nodo.jpg" alt="山裾にまっすぐ伸びる農道と電柱・鉄塔" loading="lazy">
+        </div>
+        <p class="photo-caption">山裾にまっすぐ伸びる農道 ── 電柱と鉄塔が、奥へ奥へと続いていく</p>
 
-    <p>
-      「学童多し」と書かれた古びた標識のそばを通りすぎる。誰もいない田舎道に、それでもなお、子どもらの賑わいを思い出させる気配がある。場所には記憶があり、道には足跡が降り積もる。私は今、その堆積のうえを、ひとりの旅人のように歩いている。
-    </p>
+        <p>気心の知れた仲間のうち、数人はもうこの世にいない。生あるものはいつか死ぬ。わかってはいる。地球の摂理なのか、自然界の摂理なのか。言葉にしたところで、腑に落ちるわけでもない。</p>
 
-    <blockquote>
-      生きているとは、おそらく、こうした夕雲の下に立ち、肺いっぱいに春の匂いを吸い込み、足の裏でアスファルトの温度を確かめている、その一瞬一瞬のことなのだろう。
-    </blockquote>
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_02_kinomi.jpg" alt="葛の葉に覆われた木に実る橙色の小さな実" loading="lazy">
+        </div>
+        <p class="photo-caption">葛の葉に覆われた木に、橙色の小さな実がびっしりと ── 名前は知らないまま、毎年この道で見ている</p>
 
-    <p>
-      帰途、空が淡い水色に変わるのを見た。雲は西へ流れ、私の影は長く伸びていた。歩けたこと、見えたこと、感じられたこと――この三つが揃った日は、それだけで、もう充分に幸福と呼んでよいのである。
-    </p>
-  </article>
+        <div class="blog-separator"></div>
 
-  <section class="archive-section">
-    <h3>P A S T &nbsp; E N T R I E S</h3>
-    <ul class="archive-list" id="archiveList">
-      <li><span class="d">2026.08.15</span><a href="blog-20260815.html">秋の兆し ── 小川町の、八月十五日</a></li>
-    </ul>
-  </section>
+        <p>母を見送り、火葬の日を迎えたとき、私は床に寝転んで慟哭した。人目もはばからなかった。</p>
 
+        <p>そこへ、子供たち二人が声をかけてきた。</p>
+
+        <p>「親父、しっかりしろ」</p>
+
+        <p>不思議なもので、その一言で気が楽になった。そして、目が覚めた。かつて私も、母に同じことを言ったのだ。</p>
+
+        <p>祖母が死んだとき、母は二週間ほど炬燵に潜り込んだまま動かなかった。あまりに心配になり、私は「めそめそするなよ」と声をかけた。母はそれから、まるで人が変わったように立ち直った。</p>
+
+        <p>いまならわかる。あのとき母は、たぶん今の自分と同じ気持ちだったのだろう。そして、息子に心配をかけたくないと思ったに違いない。悲しみが消えたのではない。息子の前で、親の顔に戻っただけだ。</p>
+
+        <p>子孫繁栄からくる本能なのだろうか。不思議な気持ちである。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>今年で、会社は創業三十年になる。</p>
+
+        <p>三十年、町の下に水道管を埋めてきた。布設替工事、更新工事という。いま掘り当てる管の多くは、四十五年前後も前に、顔も知らない誰かが埋めたものだ。その人はもう現場にいない。それでも管は水を運び続け、町の暮らしを支えてきた。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_03_kogane.jpg" alt="穂が黄金色に変わった田と赤白の鉄塔" loading="lazy">
+        </div>
+        <p class="photo-caption">九月。穂が黄金色に変わった田と、見慣れた赤白の鉄塔 ── 畦には彼岸花が咲いていた</p>
+
+        <p>私が今日埋める管も、いつか誰かが掘り起こす。そのとき私はいない。隣で同じ穴を覗き込んでいるのは、息子である。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>その五十七歳が、いまごろになってAIを覚え始めた。</p>
+
+        <p>パソコンは見積書と工事写真が打てれば十分、と思って生きてきた人間である。手探り、という言葉がちょうどいい。同じことを何度も聞き、同じところで何度も詰まる。それでも続けているうちに、自分の仕事に合う道具がいくつか手元にできた。設計書を読ませる。単価を照らし合わせる。入札の公告を毎日見に行かせる。二人きりの会社だから、足りない手を道具で補うしかない。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_04_aota.jpg" alt="青い稲が育つ夏の田と晴れた空" loading="lazy">
+        </div>
+        <p class="photo-caption">夏の田 ── 青い稲と、晴れた空に浮かぶ雲。これから育つもの</p>
+
+        <p>息子も、書類整理にAIを使っている。二十八歳である。</p>
+
+        <p>いまでは書類を作る手間が、以前の半分以下になった。浮いた分で、別の仕事ができる。二人の会社にとって、これは人が一人増えたのとそう変わらない。</p>
+
+        <p>五十七歳と二十八歳では、やはり覚えが違う。私が何度も聞き直すところを、息子は一度で呑み込む。悔しいかと言われれば、少しは悔しい。だが、それでいい。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>覚えて何をしているかというと、積算である。</p>
+
+        <p>誰でも閲覧できる公表済みの設計書を取り寄せ、自分で計算した金額と並べてみる。答え合わせだ。ズレたときは、たいてい私のほうが足りない。単価の拾い方、歩掛かりの読み違い。直して、また次を計算する。その繰り返しを、ただ積み上げている。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_05_karita.jpg" alt="刈り取りの終わった田に残る切り株と鉄塔" loading="lazy">
+        </div>
+        <p class="photo-caption">十月。刈り取りの終わった田に、切り株だけが残る ── 鉄塔は同じ場所に立っている</p>
+
+        <p>この答え合わせを、自慢話にするつもりはない。威張るような話ではないのだ。むしろ逆で、同じ条件で計算すれば同じ答えになる、という当たり前を、一件ずつ確かめているにすぎない。</p>
+
+        <p>ただ、その当たり前が積み重なると、ひとつだけ良いことがある。発注する側と受ける側が、同じものさしで測れるようになる。基準も単価も公開されているのだから、読めば誰にでも手が届く。公正で公平な入札というのは、たぶん、こういう地味なところから始まるのだと思う。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>人は死ぬ。だが、埋めたものは残り、次の誰かが掘り起こして継ぐ。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="1200" src="https://akira5065.github.io/blog_media/sanpo_2026_10_06_yugure.jpg" alt="日が落ちたあとの空と現場から戻った軽トラック" loading="lazy">
+        </div>
+        <p class="photo-caption">日が落ちたあとの空と、現場から戻った軽トラック ── 五十七歳は、夜の七時半</p>
+
+        <p>母がくれた一言が、私の子から私に返ってきたように。町の下に埋めてきた三十年を、次へ渡したい。道具のほうは、もう半分渡っている。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260917" data-cat="kouji"><div class="b-meta"><span class="d">2026.09.17</span><span class="cat kouji">工事のこと</span></div><h2>あおりのシートを張り替える ── 盆明け、片道一時間半の現場で</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>盆が明けた八月十七日から、埼玉県のある市の現場に通っている。片道、一時間半。小川町を出るころはまだ薄暗く、着くころには日がすっかり高くなっている。当社はこの工事に、水道本管布設の下請工事業者として登録されている。担当は、土工と配管である。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog01_taicho.jpg" alt="施工体制台帳に記載された当社の欄" loading="lazy">
+        </div>
+        <p class="photo-caption">施工体制台帳に記された当社の欄 ── 担当は土工・配管</p>
+
+        <div class="blog-separator"></div>
+
+        <p>恥ずかしい話から書く。当社の三トンダンプは、あおりのシートが数年前から破れていた。風にあおられるたびに裂け目が広がり、しまいには元の形が分からないほどぼろぼろになっていた。自分は、さして気にしていなかった。走ればいい、積めればいい。そう思って乗っていた。</p>
+
+        <p>さすがに元請の方が見かねたのだと思う。このダンプは安全上問題がある、と言われた。飛散防止という一点において、まったくその通りである。返す言葉がなかった。</p>
+
+        <p>驚いたのは、そのあとだった。元請の従業員の方々が、五人がかりで直してくださったのである。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog02_shuri.jpg" alt="あおりのシートを張り替える作業" loading="lazy">
+        </div>
+        <p class="photo-caption">五人がかりの張り替え ── 慣れない作業で、半日かかった</p>
+
+        <p>誰も、この作業の専門ではない。支柱にシートを通し、リベットを打ち、寸法が合わずにやり直し、また打つ。手順を確かめながらの作業で、結局、半日がかりになった。それでも仕上がりは、驚くほどきれいだった。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog03_sheet.jpg" alt="張り替えを終えたダンプのあおり" loading="lazy">
+        </div>
+        <p class="photo-caption">張り替えを終えたあおり ── 見違えるようになった</p>
+
+        <p>下請の道具を、元請が手を止めて直す。契約の上では、誰の仕事でもない。それでも安全のためだと言って、半日を使ってくださった。ありがたい、という言葉では足りない気がしている。安全とは、書類に書いて終わるものではなく、こういう半日の積み重ねのことなのだと思う。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>現場は、ある団地の中である。</p>
+
+        <p>作業を始めてすぐ、住民の方からお叱りをいただいた。誘導員の態度が悪い、というご指摘だった。理由を並べても仕方がないので、その場は頭を下げてお詫びした。</p>
+
+        <p>生活道路を掘り返すということは、そこに住む方の日常に手を入れるということである。車の出入り、通学路、音、砂ぼこり。こちらにとっては一日の作業でも、住む方にとっては毎日のことだ。苦情というのは、その毎日の側から出てくる。だから、まず謝る。それでいいと思っている。</p>
+
+        <p>ただ、その後も苦情は続いている。役所にも、日を置かずに届いているようである。先日には、現場に立つ誘導員が、聞き流すわけにはいかない言葉を向けられる場面もあった。詳しくはここには書かない。書けば、話がこじれるだけだからである。元請と相談のうえ、記録を残し、対応は決めてある。現場で一日中立ち続ける人間を守るのは、会社の仕事だと思っている。</p>
+
+        <p>小川町では、ここまでの言葉を向けられることは、まずない。当たり前だと思っていたことが、当たり前ではなかったと気づかされた。平和とは、結局のところ、何も起きないということなのだろう。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog05_kansen.jpg" alt="掘削して現れた既設の水道管" loading="lazy">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog06_shizai.jpg" alt="資材置場に並べられた配水管" loading="lazy">
+        </div>
+        <p class="photo-caption">掘れば、先人の敷いた管が出てくる ／ 明日の分の管が、資材置場に並ぶ</p>
+
+        <p>掘れば、何十年も前に先人が敷いた管が出てくる。継手の形も、防食の巻き方も、その時代のやり方である。それを新しい管に替え、また何十年か先へ渡す。水道の仕事とは、つまるところそういう仕事だ。誰にも気づかれずに終わるのが、いちばん良い。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1600" height="900" src="https://akira5065.github.io/blog_media/blog04_genba.jpg" alt="現場に到着した当社の三トンダンプ" loading="lazy">
+        </div>
+        <p class="photo-caption">張り替えたシートで、今日も現場へ</p>
+
+        <p>工事は、残り一か月半ほどかかる見込みである。暑さは少しずつ緩んできた。だからといって気が緩んではいけない。事故だけは、起こすわけにいかない。張り替えていただいたあのシートを見るたびに、そう思っている。</p>
+
+        <p style="text-align:right">株式会社新井設備工業　新井 昭男</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260815" data-cat="shiki"><div class="b-meta"><span class="d">2026.08.15</span><span class="cat shiki">小川町の四季</span></div><h2>秋の兆し ── 小川町の、八月十五日</h2><div class="b-body">
+<div class="blog-post-body">
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/S__31940614_0.jpg" alt="台風の翌朝、増水して濁った市ノ川" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/S__31940612_0.jpg" alt="台風一過の青空と鉄塔" loading="lazy">
+        </div>
+        <p class="photo-caption">台風一過の市ノ川と、翌朝の空 ── 荒れた気配は、もうどこにもない</p>
+
+        <p>台風が抜けた翌朝、いつもの散歩道を歩いた。橋の上に立つと、市ノ川が濁っていた。普段は底の石が見えるほどの流れが、茶色く重たい水になって、音を立てて下っていく。ほんの数日前まで、静かな川だったはずである。</p>
+
+        <p>顔を上げれば、空はもう嘘のように晴れている。ただ、雲の輪郭が、少し前とは変わったように思う。真夏の入道雲は空の低いところで沸き立っていたが、この日の雲は、ずいぶん高いところを流れていた。夕方には、どこかでひぐらしが鳴いていた。八月十五日である。まだ暑い。それでも、秋はもう、山のほうから降りてきている。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>今月の敬天新聞（令和八年八月号）に、「酷暑時代　国の備えは万全か」という見出しがあった。本文はまだ載っていない。鋭意調査中とのことである。備えというのは、つくづく報われにくいものだと思う。うまくいけば何も起きず、何も起きなければ、備えた事実そのものが誰の記憶にも残らない。そして事が起きたときにだけ、なぜやっていなかったのかと問われる。護岸も、堤防も、避難の段取りも、みなその性格を持っている。</p>
+
+        <p>同じ号には、熊の被害をめぐる議論も載っていた。読者から「御託を並べず今すぐ頭数を元に戻せ」という強い意見が寄せられ、編集部はそれに応えて、人命が最優先であることを認めたうえで、こう書いていた。人間は山を削り、森を変え、自然を都合よく作り替えてきた。その結果が今日の事態であるならば、これは獣害というより、人間の驕りに対する自然からの警鐘ではないか、と。濁った川を眺めながら、この一節を思い出した。私たちは自然を制御しているつもりでいるが、実際には、機嫌のいい日に通してもらっているだけなのかもしれない。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/S__31940613_0.jpg" alt="小川町の里山と、穂を持ち始めた青い田" loading="lazy">
+        </div>
+        <p class="photo-caption">里山と、青い田 ── 稲はもう、穂を持ち始めている</p>
+
+        <div class="blog-separator"></div>
+
+        <p>散歩コースの途中に、ヤギを飼っているお宅がある。いつも柵の内側からこちらを見ている、顔なじみのヤギである。その日、様子が違った。小さいのがいる。どうやら子が生まれたらしい。</p>
+
+        <div class="blog-video-wrap">
+          <video width="1280" height="720" controls preload="metadata">
+            <source src="https://akira5065.github.io/goat_20260815.mp4" type="video/mp4">
+            お使いのブラウザは動画再生に対応していません。
+          </video>
+        </div>
+        <p class="photo-caption">散歩コースのヤギ ── 子が生まれていた</p>
+
+        <p>親のそばを離れず、覚束ない足でついて回っている。台風が来ようが、遠い国で戦争が起きていようが、この生き物たちは餌を食べ、子を産み、育てている。それだけのことなのだが、しばらく足が止まった。平和というのは、たぶんこういう風景のことを言うのだと思う。何も起きないということ。子が無事に生まれ、無事に育つということ。書いてしまえば当たり前すぎて、標語にもならない。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>今日は終戦記念日である。もう数十年前になるが、靖国神社に併設されている遊就館を訪れたことがある。特攻に発つ前の若者たちが、身内に宛てて書いた遺書が収められていた。読み進めるのが、途中から苦しくなった。文章は驚くほど静かで、取り乱してもいなければ、恨み言も書いていない。両親への感謝と、詫びと、先立つことへの断りが、整った字で綴られている。二十歳前後の人間が書いたものである。自分にも子がいて、親がいる。だから余計にいたたまれなかった。</p>
+
+        <p>あれから折にふれて考えるのは、遺書そのものよりも、書き終えたあとの時間のことである。飛び立ってから、目標に到達するまでには、数時間があったという。その間、機体の中で、彼らは何を見ていたのだろうか。晴れた朝の、きれいな日の出。眼下に広がる、静かな大海原。皮肉なほど美しかったはずである。その数時間、二十歳の人間は、何を思っていたのだろうか。</p>
+
+        <p>知る由もない。誰も帰ってこなかったのだから、それを聞き取ることは、もう永久にできない。私たちに残されたのは、飛び立つ前に書かれた紙だけである。書かれなかった数時間の方が、たぶん、はるかに長い。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>身内に、医療に携わっている者がいる。先月、こんな話を聞いた。入院されていた患者さんの中に、かつて特攻を志願しながら、出撃の前に終戦を迎えた年配の方がいらしたという。</p>
+
+        <p>それを聞いたとき、私は率直に、運がよかったのだ、と思った。生き延びられたのだから、それ以上に良いことはない。しかし、ご本人はそうではなかったらしい。奥様には、生涯にわたって、同じことを語り続けていたそうだ。自分は出撃できなかった、という負い目。国が求めたときに、自分だけが飛べなかったという思い。そして、先に発っていった仲間たちを失った悲しみ。</p>
+
+        <p>正直に書く。私には、この気持ちが分からない。生きて帰れたのなら、それでいいではないか、と思ってしまう。誰があなたを責めるものか、とも思う。しかし、その方にとっては、八十年かけても消えなかった何かが、そこにあったのである。分からない、と書くことしか、私にはできない。申し訳ないが、それが正直なところである。</p>
+
+        <p>ただ、ひとつだけ思うことがある。戦後、焼け野原からこの国を立て直し、世界の一位を数多く並べるまでの企業を育てたのは、まさにその世代の人たちであった。異常な働き方だったと、今なら言われるだろう。実際、そうだったのかもしれない。だが、あの世代の何人かが、「自分だけが生き残ってしまった」という負い目を抱えたまま働いていたのだとしたら。その切磋琢磨の底にあったものは、私たちが考える「意欲」や「野心」とは、まるで違う質のものだったのではないか。</p>
+
+        <p>先に発った仲間の分まで、という言い方がある。使い古された言葉である。しかし、それを本当に一生かけて背負った人が、確かにいたのだろう。病室で、奥様にだけ、それを話していた。そういう静かな話である。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>そのうえで、私はこう思う。同じ八月号の「社主のブログ」に、「何で国防や憲法改正を主張すれば『戦争に突き進んでいる』という認識になるのだろうか？」という一節があった。</p>
+
+        <p>戦争は嫌だ。二度とあってはならない。その一点に異論はない。だが、「二度とあってはならない」という結論と、「そのために何をすべきか」という手段の議論は、本来は別のはずである。ところが日本では、手段を口にした途端に、結論の方まで疑われてしまうところがある。憲法第九条の話を持ち出せば、それだけで戦争をしたがっている人間のように扱われる。</p>
+
+        <p>九条があるから戦後八十一年間、日本は戦火を免れてきたのだ、という考え方がある。一方で、免れてきたのは別の要因によるのであって、九条はそれを説明していない、という見方もある。私はどちらが正しいのか、断じるだけの知識を持たない。ただ、確かなことがひとつある。攻め込む側は、こちらの憲法を読んではくれない、ということだ。</p>
+
+        <p>歴史を見れば、侵略にはたいてい大義が用意されてきた。自国民の保護、歴史的な領有権、脅威の除去──どれも当事国にとっては筋の通った理屈である。理不尽な大義であっても、掲げる側は本気で掲げる。ならば、こちらが平和を望んでいるという事実だけで、それが止まるものだろうか。まして今は、核を持つ国のふるまいが、以前ほど予測できなくなっている。戦後の秩序を支えてきた枠組みが、静かに緩んでいる。</p>
+
+        <p>議論した結果として「やはり今のままでよい」という結論に至るなら、それは立派な選択である。私が危ういと思うのは、議論そのものを始めないことの方だ。考えないでいることと、平和を守ることは、同じではない。あの機体の中の数時間を、二度と誰にも過ごさせないために何が要るのか。感情ではなく、頭で考えたい。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>中東情勢は落ち着く気配がない。そして、それは遠い出来事のままでは終わらない。原油が上がり、輸送費が上がり、電気代が上がり、店頭の値札が上がる。これは、弊社の仕事でも肌で感じていることである。ポリエチレン管の価格が急騰した。運搬費も上がった。もとをたどれば原油から生まれる材料であり、原油を燃やして運ぶものだから、当然といえば当然の話ではある。それでも、見積書に並ぶ数字が地球の裏側の情勢で動いていくというのは、以前はあまり考えもしなかったことである。</p>
+
+        <p>戦争の爪痕、と言っては大げさかもしれない。ミサイルが飛んでくるわけでも、街が焼けるわけでもない。それでも、遠い国で上がった火の手は、確実にこの町の一枚の見積書にまで届いている。世界はもう、そういうふうに繋がってしまっている。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>スイカが食べたければ、小川町のマーケットに行けばいい。物価が上がったとはいえ、金さえ払えば、満足するまで食べられる。それが、この町の平和である。書いてみると、ずいぶん散文的な話だ。しかし、八十一年前の八月に、この当たり前がどれほど遠かったかを思えば、散文的であることそれ自体が、たいへんな達成なのだと思う。</p>
+
+        <p>その夕方、近所の方がスイカを持ってきてくださった。八十近いご婦人である。おぼつかない足取りで、意外なほど大きなスイカを、徒歩で運んでこられた。両手で抱えるようにして、ゆっくりと。恐縮しながら受け取ったが、正直、ありがたいという言葉しか出てこなかった。</p>
+
+        <p>受け取ってから、ふと考えた。あの世代にとって、スイカとはどういう果物だったのだろうか。戦後まもない日本で、これは相当に貴重なものだったに違いない。滅多に口に入らず、手に入れば家族で切り分けて、種まで惜しんで食べたのではないか。その記憶を持っている方が、それを人に贈るという行為に込めている重みは、店で買える私たちの感覚とは、たぶん少し違う。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/S__31940615_0_rot180.jpg" alt="ご近所の方がくださったスイカ" loading="lazy">
+        </div>
+        <p class="photo-caption">ご近所の方が、徒歩で運んでくださった</p>
+
+        <p>包丁を入れると、いい音がした。赤い実が、思った以上に赤かった。これである、と思った。</p>
+
+        <p>今日、この町で空襲警報が鳴ることはない。子どもが遺書を書かされることもない。二十歳の若者が、晴れた朝の海の上を、片道の燃料で飛ぶこともない。川は増水したが、翌日には青空が戻り、ヤギには子が生まれ、八十を過ぎたご婦人が重いスイカを抱えて歩いてきてくださる。</p>
+
+        <p>八十一年前、あの手紙を書いた若者たちが願ったのは、たぶん、こういう日常だったのではないか。そして、飛べずに生き残ったことを八十年悔い続けた方が、その手で作り上げたのも、たぶん、この日常だったのではないか。</p>
+
+        <p>日が、少し短くなった。夕方の風に、もう夏の重さがない。稲は穂を垂れ始め、じきに刈り入れである。今年もまた、何事もなく秋が来る。この当たり前を次の三十年も続けるために何が要るのかを、恐れずに、しかし勇ましくもならずに、考えていきたいと思う。</p>
+
+        <p>戦没者の御霊に、心より哀悼の意を表します。</p>
+
+        <span class="blog-tag">終戦記念日</span>
+        <span class="blog-tag">小川町</span>
+        <span class="blog-tag">市ノ川</span>
+        <span class="blog-tag">台風</span>
+        <span class="blog-tag">ヤギ</span>
+        <span class="blog-tag">遊就館</span>
+        <span class="blog-tag">敬天新聞</span>
+        <span class="blog-tag">平和</span>
+        <span class="blog-tag">日記</span>
+      </div>
+</div><div class="b-tags"><span>#終戦記念日</span><span>#小川町</span><span>#市ノ川</span><span>#台風</span><span>#ヤギ</span><span>#遊就館</span><span>#敬天新聞</span><span>#平和</span><span>#日記</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260728" data-cat="hibi"><div class="b-meta"><span class="d">2026.07.28</span><span class="cat hibi">日々のこと</span></div><h2>太子線の記憶 ── 草津の帰りに、深い森の廃駅を訪ねて</h2><div class="b-body">
+<div class="blog-post-body">
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_01_hopper_retsu.jpg" alt="蔦の絡まる鉱石積み込み施設（ホッパー）跡のアーチ" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_02_platform.jpg" alt="旧太子駅のホームと保存車両" loading="lazy">
+        </div>
+        <p class="photo-caption">鉱石積み込み施設（ホッパー）跡と、静かに残るホーム ── 深い山の中に眠る旧太子駅にて</p>
+
+        <p>草津温泉からの帰路、ふと立ち寄った群馬県長野原町の「旧太子（おおし）駅」。かつて国鉄太子線の終着駅であった場所は、いま静かな鉄道公園として時を止めている。駅舎に掲げられた案内板を一枚一枚読み進めるうちに、観光の余韻の中で出会ったこの小さな駅が、思いのほか深い歴史を背負っていることを知り、その感想を記しておきたい。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>案内板によれば、吾妻川は昔から河原の石までも赤く染める川として知られていたそうだ。その源をたどると、太子駅から直線距離にしておよそ8キロ、中之条町大字入山字元山地区（現・チャッポミゴケ公園）にあった「群馬鉄山」に行き着くのだという。褐鉄鉱を産したこの鉱山こそが、川を赤く染めた張本人であり、この静かな山あいにも、かつては赤く色づくほどの鉱業の営みがあったのかと、少し驚かされた。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_03_annai_ita_zenkei.jpg" alt="群馬鉄山の創立と太子線の開通・戦後の太子線を解説する案内板" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_04_annai_ita_up.jpg" alt="太子線の敷設経緯を記した案内板の拡大" loading="lazy">
+        </div>
+        <p class="photo-caption">駅跡に掲げられた案内板 ── 「群馬鉄山の創立と太子線の開通」「戦後の太子線」</p>
+
+        <p>説明を読んでいくと、太平洋戦争末期、輸入鉄鉱石の減少によって国内の鉄鋼業が逼迫する中、日本鋼管株式会社（現・JFEスチール）が昭和18年（1943年）に鉱業権を取得し、群馬鉄山の開発に着手したとある。採掘された鉄鉱石は索道（空中ケーブル）で山から太子駅まで運ばれ、国鉄線を経由して京浜工業地帯の製鉄所へと送られたそうで、国の要請によって敷設された長野原～太子間5.8キロのこの専用線が、国家的な物流網の末端を担っていたことを知り、あらためてこの場所の重みを感じた。</p>
+
+        <p>ここで「日本鋼管」という社名に出会ったことは、水道設備を生業とする当社にとって、実はまったくの他人事ではない。日本鋼管、現在のJFEスチールは、耐震型の鋳鉄管をはじめ、近年ではポリエチレン管なども手掛ける、当社の日々の工事に欠かせない資材メーカーである。鉄鉱石を山あいから運び出すことから始まったこの会社の歩みが、時代を経て今も自分たちの仕事の足元を支える管材として息づいていることに気づき、思わず案内板の前で立ち止まってしまった。インフラを支える企業というのは、こうして一世紀近い実績の積み重ねの上に、いまの信頼を築いているのだと、職業柄あらためて実感させられた瞬間である。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>開通は昭和20年（1945年）1月2日、大雪の中での初出荷だったというが、その出荷が軌道に乗らぬうちに終戦を迎えたというくだりには、時代のままならなさを思わずにいられない。戦後、鉱山は事業を再開し、太子線が運んだ鉄鉱石は焼け跡から立ち上がる日本の重工業を下支えする資源になったとのこと。昭和29年（1954年）には旅客営業も始まり、地域の通勤・通学の足としても賑わったと知り、当時はさぞ活気のある駅だったのだろうと想像がふくらむ。高度経済成長の一翼を、この山あいの小さな鉄路が確かに担っていたのである。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_06_hensen_nenpyou.jpg" alt="旧太子駅の変遷・群馬鉄山の変遷を記した年表" loading="lazy">
+        </div>
+        <p class="photo-caption">「旧太子駅の変遷」「群馬鉄山の変遷」の年表 ── 開業から廃線までの歩みが刻まれている</p>
+
+        <p>しかしその賑わいも長くは続かず、資源の枯渇と経済構造の転換により昭和41年（1966年）に群馬鉄山は閉山。太子線も昭和45年（1970年）に営業を廃止し、翌46年（1971年）には廃線となったとある。祖先伝来の田畑を提供してまでこの鉄路を支えた地元の人々がいたという一文には、静かながらも胸を打つものがあった。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>そうした賑わいの歴史を知ったうえで、あらためて構内を見渡すと、いまここにあるのは驚くほどの静けさだった。蔦の絡まる鉄筋コンクリートのアーチが延々と連なる鉱石積み込み施設の廃墟、剥き出しになった鉄筋と苔むした躯体は、まるで近代化遺産の回廊のようで、産業考古学的な迫力すら感じさせる。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_07_hashira_up.jpg" alt="蔦の絡まる鉄筋コンクリート橋脚の拡大、剥き出しの鉄筋" loading="lazy">
+        </div>
+        <p class="photo-caption">剥き出しの鉄筋に蔦が這う ── 昭和の構造物を、静かに包み込んでゆく自然</p>
+
+        <p>かたわらには黒塗りの貨車や、大井川鐵道から譲り受けたという有蓋車が静かに佇み、ホームには「太子 OSHI」の古びた駅名標が、次の長野原の文字とともに残されている。かつて鉄鉱石と人とを運んだ列車たちが、深い山の中でひっそりと眠っているのである。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_08_kasha.jpg" alt="保存されている黒塗りの貨車の列" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_09_yuugaisha.jpg" alt="大井川鐵道から譲り受けた有蓋車" loading="lazy">
+        </div>
+        <p class="photo-caption">保存されている貨車の数々 ── 大井川鐵道から譲り受けたという有蓋車も並ぶ</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_10_ekimei_hyou.jpg" alt="太子駅の古い駅名標「太子 OSHI」" loading="lazy">
+        </div>
+        <p class="photo-caption">「太子 OSHI」の駅名標 ── 隣駅は長野原であったことがうかがえる</p>
+
+        <p>案内をしてくださるのも、事務室にただ一人座る管理人の方だけで、あれほど多くの人と貨物で賑わったはずの駅が、いまはこれほど静まり返っているのかと、その落差にしみじみとしたものを感じた。小さな展示室には、当時の制帽やカンテラ、方向幕、ダイヤグラム、精巧な鉄道模型などが並び、まるで昭和という時代がそのまま標本箱に収められているようであった。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_11_shiryoshitsu.jpg" alt="制帽やカンテラ、鉄道模型などを展示する資料室" loading="lazy">
+        </div>
+        <p class="photo-caption">小さな資料室に並ぶ制帽・カンテラ・ダイヤグラム・鉄道模型 ── 昭和がそのまま標本箱に</p>
+
+        <p>平成28年度には全国からの寄附で駅の復元工事が行われたそうで、記念の銘板には群馬県内はもとより東京、神奈川、千葉、栃木、茨城、福島、遠く静岡からも名前が寄せられていた。この誰もいない山の中の駅を、いまも大切に思う人が全国にいるのだと知って、少し温かい気持ちになった。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/taishi_05_kifukin_meiban.jpg" alt="旧太子駅復元工事の寄附者芳名を刻んだ銘板" loading="lazy">
+        </div>
+        <p class="photo-caption">平成28年度「旧太子駅復元工事」の寄附者芳名板 ── 全国各地から寄せられた名前が並ぶ</p>
+
+        <div class="blog-separator"></div>
+
+        <p>この深い森の中に佇む貨車や、蔦に覆われた積み込み施設の跡を眺めていると、かつてここで働き、汽笛を聞き、家族を見送り、あるいは迎えた一人ひとりに、それぞれの思いがあったのだろうと想像せずにはいられない。春夏秋冬を幾度となく繰り返しながら時代は移ろい、やがて多くの記憶は人々の心から静かに消えてゆく。そのことに、一抹の寂しさを覚えずにはいられない。けれどもその一方で、忘却の流れに逆らうようにして、こうして遺構を守り、資料を残し、遠方からも寄附を寄せて名前を刻む人々がいる。記憶が薄れゆく寂しさの裏側で、それを惜しみ、語り継ごうとする文化的な営みもまた、確かにこの山あいに息づいているのではないか ── そんなことを、深い山の静けさの中でふと考えた。</p>
+
+        <p>草津の湯につかった帰り道に、こうして戦後日本の復興と経済発展を静かに支えた産業遺産に出会えたことは、望外の収穫であった。日本鋼管という一つの社名が、鉄鉱石を運んだ廃線の歴史と、いま自分が扱う一本の鋳鉄管とを静かに結びつけてくれたことに、不思議な縁を感じる。かつての賑わいと、いまの管理人一人だけの静寂、そして記憶が消えゆく寂しさと、それに逆らうように残されてゆく文化とを思い比べながら、華やかな高度成長の陰には、こうした山あいの一本の鉄路と、そこに携わった無数の人々、そして今も残るインフラ企業の長い実績の積み重ねがあったのだと、あらためて思いを馳せた次第である。</p>
+
+        <span class="blog-tag">群馬県</span>
+        <span class="blog-tag">太子線</span>
+        <span class="blog-tag">旧太子駅</span>
+        <span class="blog-tag">群馬鉄山</span>
+        <span class="blog-tag">産業遺産</span>
+        <span class="blog-tag">廃線</span>
+        <span class="blog-tag">日本鋼管</span>
+        <span class="blog-tag">草津温泉</span>
+        <span class="blog-tag">日記</span>
+      </div>
+</div><div class="b-tags"><span>#群馬県</span><span>#太子線</span><span>#旧太子駅</span><span>#群馬鉄山</span><span>#産業遺産</span><span>#廃線</span><span>#日本鋼管</span><span>#草津温泉</span><span>#日記</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260726" data-cat="kouji"><div class="b-meta"><span class="d">2026.07.26</span><span class="cat kouji">工事のこと</span></div><h2>一枚のタイルに、三十年の御礼を ── 小川町・浄化槽転換とトイレ水洗化の記</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>この七月二十五日、小川町のN様邸より、浄化槽転換工事に伴うトイレ水洗化工事を受注させていただきました。まずもって、数ある業者の中から当社をお選びくださったことに、深甚なる御礼を申し上げます。</p>
+
+        <p>ここで少しばかり、内輪の事情をお話しすることをお許しいただきたい。当社の年間工事の実に八割は、公共工事であります。役所の設計図書と積算基準の世界に身を置いてきた会社ゆえ、地元・小川町の皆さまにおかれては「新井設備工業? はて、どこの会社か」というのが、偽らざる認知度でありましょう。それだけに、こうして民間のお客様から直々にご指名をいただけるということは、統計的には僅かな一件でも、心情的には万金に値する。<strong>嬉しく、そして貴重なご依頼</strong>なのであります。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>工事の内容は、汲み取り式から浄化槽への転換。すなわち、浄化槽の設置、外部排水工事、そしてトイレの全面リフォームである。着工から竣工まで、およそ一週間。むろん、下請に丸投げすることなく、<strong>一貫して自社施工</strong>にてお引き渡しした。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_b1.jpg" alt="施工前：汲み取り式トイレと玉石タイルの床" loading="lazy">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_b2.jpg" alt="施工前：改修前のトイレ全景" loading="lazy">
+        </div>
+        <p class="photo-caption">【施工前】玉石タイルの床に、昔ながらの汲み取り式 ── 長年、家族の暮らしを支えてきた佇まい</p>
+
+        <p>施工前の写真をご覧いただきたい。玉石タイルの床は、昭和の職人が一粒ずつ丁寧に敷き詰めたものであろう。長きにわたり一家の日常を支えてきた、いわば生活の年輪である。それを引き継ぎ、次の三十年を託される。リフォームという仕事は、単なる設備の交換ではなく、<strong>暮らしの歴史に対する敬意の表明</strong>であると、私は考えている。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>さて、ここからが本番である。まずは既存トイレの解体。玉石タイルをはつり、旧きを丁寧に取り除いてゆく。並行して屋外では掘削が進み、浄化槽の本体が静かに据え付けられる。土中に納まったその白い槽体は、さながら家の新しい臓器である。以後、目に触れることはほとんどないが、休みなく水を浄め続ける。縁の下ならぬ、土の下の力持ちというわけだ。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_c1.jpg" alt="施工中：既存トイレの解体・はつり作業" loading="lazy">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_c2.jpg" alt="施工中：掘削した地中に据え付けられた浄化槽本体" loading="lazy">
+        </div>
+        <p class="photo-caption">【施工中】既存トイレの解体、そして浄化槽の据付 ── 土の下の力持ち、着任の瞬間</p>
+
+        <div class="blog-photo-grid">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_c3.jpg" alt="施工中：外部排水管と枡の設置工事" loading="lazy">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_c4.jpg" alt="施工中：排水枡まわりの配管接続作業" loading="lazy">
+        </div>
+        <p class="photo-caption">【施工中】外部排水工事 ── 建物を巡る排水管と枡を、一つひとつ確実に</p>
+
+        <p>外部の排水経路も、升の一つ、勾配の一分に至るまで、自社の手で丁寧に組み上げた。写真の隅に写る工事用コーンには、控えめながら当社の名が入っている。看板を背負って現場に立つ ── その緊張感こそが、品質の最初の保証であると心得ている。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_a2.jpg" alt="施工後：温水洗浄便座付き水洗トイレと木目調フローリング" loading="lazy">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_a3.jpg" alt="施工後：明るくなったトイレ空間の全景" loading="lazy">
+        </div>
+        <p class="photo-caption">【施工後】温水洗浄便座の水洗トイレに、木目のフローリングと明るいクロス</p>
+
+        <div class="blog-photo-grid">
+          <img width="1100" height="826" src="https://akira5065.github.io/toilet_2026_07_a1.jpg" alt="施工後：新設したTOTO壁掛手洗器" loading="lazy">
+        </div>
+        <p class="photo-caption">【施工後】壁掛の手洗器も新設 ── 磨かれた金属の配管は、いわば当社の署名である</p>
+
+        <div class="blog-separator"></div>
+
+        <p>かくして、玉石タイルの床は明るい木目のフローリングへ、汲み取り式の便器は温水洗浄便座を備えた水洗トイレへと生まれ変わった。窓から差す光が白いクロスに柔らかく回り、狭かったはずの空間が、心なしか広くさえ感じられる。竣工の検分にお立ち会いいただいたお客様から、<strong>「とても満足しています」</strong>とのお言葉を頂戴したときの安堵と喜びは、公共工事の竣工検査に合格した時のそれとは、また別種の、じんわりと温かいものでありました。</p>
+
+        <p>水洗の一押しに、浄化槽の静かな働きに、そして手洗器を流れる清らかな一筋に、当社三十年の技術と、御礼の気持ちを込めたつもりであります。N様、このたびは誠にありがとうございました。末永く、快適にお使いいただけますように。そして小川町の皆さま ── 公共工事で鍛えた施工力は、ご家庭の水まわりにも、余すことなく発揮いたします。どうぞお気軽に、お声がけくださいませ。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260706" data-cat="hibi"><div class="b-meta"><span class="d">2026.07.06</span><span class="cat hibi">日々のこと</span></div><h2>クゥーちゃんへ ── 十六年の生涯と、ひとつの再会に寄せて</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>七月一日、一匹の猫が静かにその生涯を閉じました。名はクゥー。十六歳でした。</p>
+
+        <p>クゥーは、三年半前に他界した母が、誰よりも慈しんでいた猫です。母亡きあと、私たち家族が母の想いごと引き継ぎ、共に暮らしてまいりました。</p>
+
+        <p>二年余り前、クゥーは癌を患い、獣医師から「余命三か月」と告げられました。しかしクゥーは、その宣告を静かに裏切り続けました。三か月が半年になり、一年になり、二年を超えて ── 小さな身体のどこにそれほどの力があったのかと、今も不思議でなりません。</p>
+
+        <p>最期は苦しむことなく、家族に見守られながらの旅立ちでした。死に目に立ち会えたことは、せめてもの救いです。</p>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:16px; margin:20px 0; max-width:640px; margin-left:auto; margin-right:auto;">
+          <div>
+            <video width="1280" height="720" controls preload="metadata" playsinline poster="https://akira5065.github.io/kuu_chan_poster_2026_07_06.jpg" style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/kuu_chan_2026_07_06.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画：在りし日のクゥーちゃん(約四分)</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:-8px;">※再生ボタン(▶)を押してください。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1080" height="1350" src="https://akira5065.github.io/kuu_chan_illust_2026_07_06.png" alt="母の膝の上で涙を浮かべるクゥーちゃんのイラスト" loading="lazy">
+        </div>
+        <p class="photo-caption">イラスト：母の膝の上で ── 涙の再会</p>
+
+        <p>今ごろクゥーは、三年半ぶりに母と再会しているのでしょうか。そう思うと、深い安堵と、埋めがたい寂しさとが胸の中で交錯します。あちらで母を見つけたら、「三年半も置いていくなんて」と、思う存分泣いて甘えてほしい。母もきっと、あの頃と同じように膝の上に迎えてくれるはずです。</p>
+
+        <p>十六年間、本当にありがとう。クゥーちゃん、どうか安らかに。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260615" data-cat="kouji"><div class="b-meta"><span class="d">2026.06.15</span><span class="cat kouji">工事のこと</span></div><h2>日本有機農業の原点・霜里農場で、漏水修理を行いました ── 十数年来のご縁に支えられて</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>本日は、十数年以上にわたってお世話になっている、埼玉県比企郡小川町下里の<strong>霜里農場</strong>さんへ、漏水修理でお伺いした。設備屋にとって「長いお付き合いの現場」というのは、単なる得意先ではない。年月をかけて配管の一本一本、蛇口の一つひとつまで見知った、いわば体の一部のような場所である。今日はその大切な現場の、水の話である。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_01_zenkei.jpg" alt="里山にいだかれた霜里農場の全景 - 埼玉県小川町下里" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_02_sagyoto.jpg" alt="歳月を重ねた霜里農場の作業棟と背後の里山" loading="lazy">
+        </div>
+        <p class="photo-caption">里山にいだかれた霜里農場 ── 作業棟と、抜けるような六月の空</p>
+
+        <p>霜里農場は、故・<strong>金子美登(かねこ よしのり)さん</strong>が半世紀以上をかけて耕してこられた、いわば「日本有機農業のふるさと」である。化学肥料や農薬に頼らず、地域の資源をぐるりと循環させる農のかたちを、日本でもっとも早くから実践してこられた。やがてその輪は一軒の農場を越えて集落全体へと広がり、この小川町下里は「日本初の有機の里」として、全国に名を知られるようになった。生前、私どもも折にふれてお世話になり、その大きな背中から学ばせていただいたことは数えきれない。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_03_junkansha.jpg" alt="循環舎に掲げられた「土と共に」「循環の大地」金子美登さん直筆の言葉" loading="lazy">
+        </div>
+        <p class="photo-caption">循環舎に掲げられた「土と共に」「循環の大地」── 金子美登さん直筆の言葉</p>
+
+        <div class="blog-separator"></div>
+
+        <p>さて、今回ご依頼いただいたのは、<strong>屋外の給水管</strong>、ならびに<strong>建物まわりの配管</strong>からの漏水である。ところが、これがなかなかの難物であった。なにしろ農場は広い。水はどこかで漏れているのに、その「どこか」がなかなか尻尾を出してくれない。地道に範囲を絞り込み、原因箇所を突き止めるまでに、漏水調査だけで<strong>およそ一日半</strong>を要した。焦らず、丁寧に。水は正直で、必ずどこかに答えを残している。無事に漏水箇所を発見できたときの、あの胸のすく思いといったらない。</p>
+
+        <p>あとは職人の仕事である。損傷していた箇所は地面を掘削して配管を新しいものに交換し、あわせて継手や接続部の部分補修を施して、確実に止水した。歴史ある建物と、自然の循環を何より大切にしてこられた農場である。その環境に配慮しながら、一つひとつ手を抜かずに進めさせていただいた。</p>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_04_kahi.jpg" alt="霜里農場の古い丸太小屋に掛けられた歌碑" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_05_iriguchi.jpg" alt="緑に包まれた霜里農場の丸太小屋の入口" loading="lazy">
+        </div>
+        <p class="photo-caption">古い丸太小屋 ── 歳月を刻んだ木肌が、農場の歩みを静かに物語る</p>
+
+        <p>思えば霜里農場さんとは、これまでにもボールタップの交換などで二度ほどお伺いしている。給湯には<strong>牧(まき)ボイラー</strong>をお使いで、水まわりの設備はこちらも勝手知ったる現場。だからこそ今回も、原因の見立てから対応まで、腰を据えて落ち着いて進めることができた。長いご縁とは、いざというときに、こういう形で役に立つものらしい。</p>
+
+        <div class="blog-separator"></div>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:16px; margin:20px 0; max-width:640px; margin-left:auto; margin-right:auto;">
+          <div>
+            <video width="1280" height="720" controls preload="metadata" playsinline poster="https://akira5065.github.io/shimosato_01_zenkei.jpg" style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/shimosato_roushu_2026_06_15.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画：霜里農場 漏水修理の現場から ── 農場の水を守る仕事(約三分)</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:-8px;">※再生ボタン(▶)を押してください。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_06_yukinosato.jpg" alt="日本初！有機の里（埼玉県小川町下里）を紹介する額" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/shimosato_07_aun.jpg" alt="霜里農場の循環型トイレ「あ・うんユニット」の案内" loading="lazy">
+        </div>
+        <p class="photo-caption">「日本初！有機の里」と、暮らしのすみずみまで循環の思想が貫かれた「あ・うんユニット」</p>
+
+        <p>田畑を潤し、暮らしを支えるうえで、水まわりの設備は決して欠かすことができない。派手さはないが、地中や壁の裏で静かに働くその一本の管が、農場の毎日を根っこのところで支えている。「土と共に」「循環の大地」── 農場のいたるところに掲げられた金子美登さんの言葉に、私はいつも初心を思い出させていただく。金子さんはすでに鬼籍に入られたが、その理念は今も農場に、そして受け継ぐ人々の手のなかに、確かに息づいている。</p>
+
+        <p>十数年来のご縁に、あらためて深く感謝しながら。これからも霜里農場の営みを、水まわりの面から末永く支えてまいりたい。それが、生前お世話になった金子さんへの、私なりのささやかな恩返しでもあると思うのである。</p>
+
+        <p style="font-size:13px; color:#888;">※写真および動画は、霜里農場さまのご許可をいただいて掲載しております。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260603" data-cat="hibi"><div class="b-meta"><span class="d">2026.06.03</span><span class="cat hibi">日々のこと</span></div><h2>在りし日の午後 ── 雷魚と、平日昼間の哲学について</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>本日は、いささか趣を変えて、十年ほど前の映像を一本、書庫の奥から引っぱり出してきた。お見苦しい点はあらかじめお詫び申し上げる。</p>
+
+        <p>正直に告白すれば、当時の弊社は、仕事が「ほとんどなかった」。受注表は白く、電話は鳴らず、時間だけが豊かにあった。経済学的に言えば需要曲線が床に張りついていた時期である。そして時間が有り余った人間が何をするかといえば、答えは一つ。<strong>平日の昼間から、釣りに行く</strong>のである。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>舞台は、埼玉県滑川町を流れる市の川(いちのかわ)。狙うは雷魚(ライギョ)。水面のルアーに、緑色の魚影がぬうっと近づき、やがて静寂を破ってバシャリと食らいつく。この瞬間の高揚は、何物にも代えがたい。──と、本人は至って真剣なのだが、画面に乗っているテロップが、また我ながらひどい。</p>
+
+        <p>曰く「平日昼間に何やっとんねん」「※社会人として終了」。曰く「歯ぐらいググっとけや」。曰く「気づくな今さら」。お察しのとおり、この間の抜けたツッコミの数々は、近頃流行りのAIにお願いして入れてもらった。<strong>機械に自虐をアウトソーシングする時代</strong>が来ようとは、十年前の私は知る由もない。技術の進歩とは、かくも残酷で、かくも愉快である。</p>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:16px; margin:20px 0; max-width:640px; margin-left:auto; margin-right:auto;">
+          <div>
+            <video width="960" height="540" controls preload="metadata" playsinline style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/raigyo_2026_06_03.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画：在りし日の雷魚釣り ── 自虐テロップはAI監修(約一分)</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:-8px;">※再生ボタン(▶)を押してください。お見苦しいテロップが流れます。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>今となっては、こうして平日の昼間に長竿を担いで野池に立つほどの余白は、もう私の手元にはない。おかげさまで、と申し上げるべきだろう。あの白かった受注表を思えば、忙しさとはありがたい悲鳴なのである。</p>
+
+        <p>それでも、ときおりこの一本を見返しては、妙に背筋が伸びる思いがする。暇を持て余していたあの頃の自分が、それでも腐らず、水辺で竿を振っていた。その緩やかな時間があったからこそ、今の慌ただしい日々を、笑って受け止められるのかもしれない。──雷魚よ、達者でやっているだろうか。次に会うときは、もう少し早く食いついてくれると、こちらとしても大変ありがたい。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260603-b" data-cat="kouji"><div class="b-meta"><span class="d">2026.06.03</span><span class="cat kouji">工事のこと</span></div><h2>社長、地底へ降りる ── 一酸化炭素と湧水と、頭上で観測に勤しむ三賢者の図</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>埼玉県吉見浄水場、発注工事。午前のうちに「マンホール蓋まわりの舗装修繕」が、われながら惚れ惚れするほど端正に仕上がった。職人たる者、ここで「本日は早めの帰還もやむなし」などという楽観的仮説を立てるわけである。仮説を立てるだけなら、無料(フリー)であるからして。</p>
+
+        <p>しかし現実とは、つねに仮説に対して反証を突きつけてくる手厳しい査読者である。午後の議題は場所を移し、東松山市内。ここには、埼玉県内の各市町村へと清らかな水を送り届ける<strong>送水管の弁室</strong>があり、その内部で、湧き水が滔々と湧いている。これを止める。すなわち<strong>止水作業</strong>。早期帰還の夢は、湧水とともに、実に物理法則に忠実に、低きへと流れ去ったのであった。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>さてここで、避けがたき難題が登場する。弁室というのは、とにかく<strong>狭く、深い</strong>。加えて、この種の半密閉空間には一酸化炭素が滞留する危険がある。これがまた厄介で、無色・無臭・無自覚。いわば<strong>Anthropic 社の Claude をもってしても発見できぬ、深層に潜むセキュリティホール</strong>のごとき代物である。気づいたときには、すでにシステムごと落ちている。笑えない。比喩としては、我ながら出色の出来だと思うが。</p>
+
+        <p>そこで私は、職人歴うん十年という経験則、現場責任者としての矜持、そして「結局いちばん身軽に動ける個体は、統計的に見て自分である」という冷徹なデータ分析の三点を総合的に勘案し、<strong>自ら地底へ降下する</strong>という意思決定に至った。残る精鋭スタッフ三名は、地上にて待機。万一に備えた監視および救助要員という、きわめて合理的な布陣である。</p>
+
+        <p>……と、かく述べれば人類の叡智を結集した一大プロジェクトのごとくであるが、現場の構図を客観的に記述すれば、こうなる。狭く薄暗い穴の底、冷たい湧水に半身を浸し、ひとり黙々と格闘する中年男性が一体。その頭上、燦々たる陽光のもと、若き三名が額を寄せ合い、穴をのぞき込んでいる。学術的に分類するならば、これは救助の図にあらず、<strong>「希少種の生態を観測する研究者の一団」</strong>と命名するのが妥当であろう。注がれる視線が、なかなかに、こたえる。</p>
+
+        <p>記録のため動画を撮影してもらった。後刻これを再生し、私は深い感慨に打たれた。狭きマンホール内、水だらけ。慎重に、慎重に。白きヘルメットのみが神々しく発光し、被写体本人は終始大真面目。しかるに画面全体からは、形容しがたい哀愁と、抑えきれぬ可笑しみとが、否応なく立ちのぼってくるのである。撮影者は厳粛、視聴者は爆笑。この主観と客観の致命的なまでの乖離こそ、本作品の学術的価値といえよう。</p>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:16px; margin:20px 0; max-width:420px; margin-left:auto; margin-right:auto;">
+          <div>
+            <video width="480" height="640" controls preload="metadata" playsinline style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/manhole_2026_06_03.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画：地底にて ── 社長、止水に挑むの記(全五分・長編フィールドワーク)</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:-8px;">※再生ボタン(▶)を押してください。約五分間の、知的かつ滑稽な記録映像です。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>本作戦で投入した秘密兵器は、その名も「<strong>止水ドン</strong>」。命名のセンスが、もはや清々しい。ドン、と止める。語感に一片の曖昧さもなく、機能と名称が完全に一致している。仕様書を読む必要すらない、究極のユーザーインターフェースである。そして特筆すべきは、これが三十年この道を歩んできた私にとって、<strong>生涯初のマンホール内・湧水止水作業</strong>であったという事実だ。齢を重ねてなお「初体験」が残されている。現場とは、いくつになっても未習の課題を出題し続ける、終わりなき生涯学習機関なのである。</p>
+
+        <p>結果、止水は無事に完了。地上の三賢者も(観測を終えて)惜しみない拍手を……送ってくれたかどうかは観測記録に残っていないが、ともあれ全員無事。これに勝る成果はない。狭く、暗く、水だらけで、わずかに滑稽。されど、こうした地味な現場の一つひとつが、県内のどこかの蛇口からこぼれる、当たり前の一杯の水を静かに支えている。なに、逆風であろうと湧水であろうと、知性とユーモアをもって変換してやれば、やがては追い風となり、われらを思いがけず遠くまで運んでくれる。──そんな確信を胸に、明日もまた、嬉々として穴の底へ降りてゆく所存である。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260514" data-cat="kouji"><div class="b-meta"><span class="d">2026.05.14</span><span class="cat kouji">工事のこと</span></div><h2>新築工事 終盤戦 ── せせらぎ、エコ給湯、そして謎の巨大キノコ</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>新築工事も、いよいよ終盤戦に差しかかってきた。今日の任務は二つ。一つはエコキュート給湯機の取り付けに伴う給湯・配水管の接続。もう一つは、浄化槽上部のコンクリート打設に向けた基礎下準備である。──いずれも仕上がってしまえば床下や地中に隠れてしまう、表に出ない工程だ。だがこの「見えなくなる部分」こそ、住まいの寿命を決める。表舞台より、舞台裏で誠実に仕事をする。それが設備屋というものの存在意義であろうと、改めて思うのである。</p>
+
+        <p>現場のすぐ脇には、小さな川が流れている。配管を抱えて運ぶ手を休めると、せせらぎの音がふっと耳に入ってくる。空は晴れ渡り、五月の風は申し分なくやわらかい。「働きながらこの環境を味わえるとは、ずいぶん贅沢な職場ではないか」── 思わずそんな独り言が口をついた。仕事の集中と、自然の弛緩。両者を一日のうちで同時に受け取れる現場というのは、そう多くはない。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>──と、束の間の哲学者気取りも長くは続かず、足元で「事件」が起こった。</p>
+
+        <p>直径25センチほどはあろうかという、巨大なキノコが突如として目の前にあったのである。</p>
+
+        <p>色合いは形容しがたく、傘の表情は妙に厳粛で、明らかにスーパーマーケットで陳列されている類のものではない。「毒キノコだろうか」「いやしかし、この風格はもしや……」── ちょうど隣で作業していた従業員の息子に「ちょっと来てみ」と声をかけ、二人並んでしゃがみ込み、にわか観察会の始まりである。</p>
+
+        <p>思い起こせば二十年以上前、近所の藪の中で、踏むと小さな白い煙をプッと吹くキノコに遭遇したことが一度だけある。生物学的にはホコリタケの一種だろうか。あのときの「自然の悪戯か、それとも何かのサインか」と妙な気分にさせられた感覚が、今日の巨大キノコと不思議に重なる。両者の間に直接の関係はあるまい。しかし人の記憶というのは、こういう細部のところで思いがけず繋がっていくものらしい。</p>
+
+        <p>念のため動画も撮ってみた。後ほど再生してみると、新築工事の進捗を背景に、中年の親方と若き従業員の息子が、ただただ巨大キノコを覗き込んで首を傾げているだけの光景。<strong>「次元の低い親子の図」</strong>とでも題すべき味わい深い一本に仕上がっており、本人としては苦笑するしかない。だがしかし、と思うのである。仕事の合間にこうした名状しがたい「？」と出会い、二人して立ち止まり、しばし口を半開きにして眺める時間── これこそが、現場仕事のささやかな醍醐味ではあるまいか。効率と納期に追われる日々の中で、自然はときどき、こうして思いがけぬ脚注を差し挟んでくる。</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0;">
+          <div>
+            <video width="1280" height="720" controls preload="metadata" playsinline style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/mushroom_short_2026_05_14.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画①：謎のキノコ ── ご対面の瞬間</p>
+          </div>
+          <div>
+            <video width="1280" height="720" controls preload="metadata" playsinline style="width:100%; border-radius:8px; background:#000;">
+              <source src="https://akira5065.github.io/mushroom_long_2026_05_14.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+            <p class="photo-caption" style="margin-top:6px;">動画②：観察会の全貌 ── 親子で首を傾げる図</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:-8px;">※再生ボタン（▶）を押してください。スマホでは縦並びになります。</p>
+
+        <p>なお、誤食は厳禁である。野生のキノコは「99.9%安全」と確証できぬ限り、<strong>触らず・採らず・食わず</strong>が鉄則。今回の主役にも丁重に距離を保ち、現場の隅にそっと戻して、自然のなかにお帰りいただいた。果たしてあの巨大キノコが何者だったのか、真相は藪の中──というより、現場の脇の草むらの中、永久に謎のままである。</p>
+
+        <div class="blog-separator"></div>
+
+        <p>明日はいよいよ、浄化槽上部のコンクリート打設の本番。気を引き締めて、安全第一でいきたい。せせらぎは明日も同じように流れ、空はまた違う表情を見せてくれるだろう。現場仕事は、いつもそうやって続いていく。</p>
+      </div>
+</div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260504" data-cat="shiki"><div class="b-meta"><span class="d">2026.05.04</span><span class="cat shiki">小川町の四季</span></div><h2>初夏の散歩日誌 ── 嵐山町シンボル林の小さな旅人たち</h2><div class="b-body">
+<div class="blog-post-body">
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_01.jpg" alt="ツツジの花と新緑 - 嵐山町の初夏" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_02.jpg" alt="嵐山町シンボル林の緑豊かな草地と森" loading="lazy">
+        </div>
+        <p class="photo-caption">五月の里 ── ツツジが咲き、緑が一斉に膨らむ季節</p>
+
+        <p>五月。空気が澄んで、風がやわらかい。気がつけば春の桜はすっかり葉桜となり、代わって里のあちらこちらで濃いピンクのツツジが顔を出している。今年もいつもの散歩道へ足を向けた。小川町から嵐山町へと続く、ゆるやかな農道である。</p>
+
+        <p>道端の藪のなかにツツジが咲いていた。鮮やかな桃色の花弁が、伸びはじめた野草のあいだに浮かびあがっている。冬のあいだ枯れ色だった土手は、ほんの数週間で嘘のように緑に覆われた。新緑とは、よく言ったものだ。葉の一枚一枚に、まだ柔らかな光がにじんでいる。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_03.jpg" alt="嵐山町の斜面でくつろぐヤギと地鶏" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_04.jpg" alt="道端で休むオレンジ色の猫 - 比企郡の里" loading="lazy">
+        </div>
+        <p class="photo-caption">小さな旅人たち ── ヤギと鶏、そして名もなき茶トラ</p>
+
+        <p>歩くこと十数分、開けた斜面に出る。ふと視線を感じて顔を上げると、こちらをじっと見る一頭のヤギがいた。すぐそばには、つやつやと毛並みのよい黒白まだらの地鶏。どちらも放し飼いだろうか、あるいは脱走中なのかもしれない。人を恐れるでもなく、こちらが立ち止まると、ヤギも草を食む口を止めて、悠然と立っている。</p>
+
+        <p>少し進むと、今度は道端の草に埋もれるようにして、茶トラの猫がうずくまっていた。日向ぼっこの最中らしい。「こんにちは」と声をかけても、薄目を開けてこちらを一瞥するだけ。「散歩のついでに通ったんですよ」と心の中でつぶやいて、私はそっと足音を忍ばせて通り過ぎた。彼の領域を乱したくはない。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_05.jpg" alt="嵐山町の牧場でくつろぐヤギ親子" loading="lazy">
+        </div>
+        <p class="photo-caption">親子のヤギ ── 大きな声を出さずに、ただそこにいる</p>
+
+        <p>さらに歩くと、別の場所でまたヤギに出会った。今度は二頭。大きな茶色のヤギの向こうに、白くて小さな子ヤギがいる。仔山羊は親のすぐそばを離れない。高い斜面の中腹で、ときどき耳を立てて、風の方向を確かめるようにしている。</p>
+
+        <p>ヤギは、声を上げて主張しない。鶏のように朝を告げることもないし、犬のように尻尾を振って人を呼ぶこともない。ただそこにいて、草を食み、空を見ている。その「静かにそこにいる」姿勢が、なんとも贅沢に思える。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_06.jpg" alt="嵐山町シンボル林の説明看板 - 自県郷恵環境保全地域" loading="lazy">
+          <img width="1477" height="1108" src="https://akira5065.github.io/walk_2026_05_07.jpg" alt="嵐山町シンボル林の全景と看板" loading="lazy">
+        </div>
+        <p class="photo-caption">嵐山町シンボル林 ── 平成七年三月、埼玉県指定</p>
+
+        <p>道の途中に、古びた看板が立っている。「嵐山町シンボル林」とある。<br>はっきりとは読めないが、「自県郷恵環境保全地域」「平成七年三月　埼玉県」「杉山城址」「コナラやアカマツが分布する自然林」――そんな文字が読み取れる。1995年（平成7年）、埼玉県によって指定された、嵐山町の重要な自然保護エリアであるらしい。</p>
+
+        <p>看板の向こうに広がる森を見る。コナラ、アカマツ、雑木林の混じり合う、典型的な里山の姿。三十年前にこの森が「保全すべきもの」として指定された理由が、立っているだけで伝わってくる。手つかずではなく、人と自然が長年かけてつくりあげた風景。それが、ここにはまだ生きて残っている。</p>
+
+        <p>空には、五月らしい白い雲が流れていた。看板の脇に立ち、しばらく雲の形を眺めていた。風が頬をなでて通り過ぎる。<br>ヤギ、鶏、猫、ツツジ、新緑、看板の文字、そして雲。<br>ぜんぶがつながって、ひとつの「嵐山町の初夏」になっている。</p>
+
+        <p>歩けたこと、見えたこと、感じられたこと。<br>この三つが揃っていれば、五月のひと日はそれだけで、もう充分だ。</p>
+
+        <span class="blog-tag">嵐山町</span>
+        <span class="blog-tag">小川町</span>
+        <span class="blog-tag">初夏</span>
+        <span class="blog-tag">散歩</span>
+        <span class="blog-tag">里山</span>
+        <span class="blog-tag">嵐山町シンボル林</span>
+        <span class="blog-tag">日記</span>
+            </div>
+</div><div class="b-tags"><span>#嵐山町</span><span>#小川町</span><span>#初夏</span><span>#散歩</span><span>#里山</span><span>#嵐山町シンボル林</span><span>#日記</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260428" data-cat="kouji"><div class="b-meta"><span class="d">2026.04.28</span><span class="cat kouji">工事のこと</span></div><h2>嵐山町の給排水設備工事 ── 古い配管の全面更新</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>先日、比企郡嵐山町（らんざんまち）にて、築40年以上のお宅の給排水設備工事を完了いたしました。武蔵嵐山駅からほど近い住宅街、長年お住まいの一戸建てで、漏水と詰まりに長年お困りだったとのこと。</p>
+
+        <p>現状を確認すると、屋内外の配管が金属管（鋼管）で、内部にスケール（錆コブ）が厚く付着しており、給水圧の低下と排水詰まりの主因となっていました。築年数から考えれば自然なことで、樹脂管への全面更新が最適と判断しました。</p>
+
+        <p>工事は3日間で完了。床下の配管を樹脂製の架橋ポリエチレン管（HIVPやポリブテン管）に交換し、外回りの排水管も塩ビ管に更新しました。給水圧は元通り、排水もスムーズになり、お客様には大変喜んでいただきました。</p>
+
+        <p>嵐山町は武蔵嵐山駅周辺の住宅地と、農村部・観光地（嵐山渓谷など）を含む地域です。築年数の経った住宅も多く、配管の老朽化による設備トラブルのご相談を年間を通していただきます。</p>
+
+        <p>「水の出が悪い」「排水が流れにくい」「水道代が急に高くなった」――こうしたサインは、配管交換のタイミングを示しています。漏水が壁の中で起きると、建物そのものの傷みにもつながります。早めのご相談をおすすめします。</p>
+
+        <p style="font-size:13px; color:#666; margin-top:20px; padding:12px; background:#f4f8fb; border-left:3px solid #0879bd;">
+          【対応エリア】小川町・嵐山町・滑川町・川島町・吉見町・鳩山町・ときがわ町・東秩父村<br>
+          【お問い合わせ】TEL 0493-72-5923 ／ akira50655065@gmail.com
+        </p>
+
+        <span class="blog-tag">嵐山町</span>
+        <span class="blog-tag">給排水工事</span>
+        <span class="blog-tag">配管更新</span>
+        <span class="blog-tag">リフォーム</span>
+        <span class="blog-tag">比企郡</span>
+      </div>
+</div><div class="b-tags"><span>#嵐山町</span><span>#給排水工事</span><span>#配管更新</span><span>#リフォーム</span><span>#比企郡</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260427" data-cat="shiki"><div class="b-meta"><span class="d">2026.04.27</span><span class="cat shiki">小川町の四季</span></div><h2>夕雲のもと、田畑をめぐる ── 通学路だった道を、ふたたび歩いて</h2><div class="b-body">
+<div class="blog-post-body">
+            <div class="blog-photo-grid">
+              <img width="1477" height="1108" loading="lazy" decoding="async" src="https://akira5065.github.io/S__26460169_0.jpg" alt="新緑の森と耕された田 ─ 小学生時代の通学路">
+              <img width="1477" height="1108" loading="lazy" decoding="async" src="https://akira5065.github.io/S__26460170_0.jpg" alt="夕陽さす里道と「学童多し」の速度標識">
+              <img width="1477" height="1108" loading="lazy" decoding="async" src="https://akira5065.github.io/S__26460171_0.jpg" alt="うねる雲と春の集落 ─ 比企郡小川町">
+            </div>
+            <p class="photo-caption">小学生時代に毎日歩いた、あの道</p>
+
+            <p>今日もまた、足の向くままに里を歩いた。新緑が日に日に厚みを増し、丘陵の稜線をやわらかく覆っている。耕されたばかりの田は、まだ水を湛えていない。黒々と濡れた土の畝が、そこに播かれるべき未来の稲穂を、静かに待っているようであった。</p>
+
+            <p>この道は、私の<strong>小学生時代の通学路</strong>である。半世紀近く前、ランドセルを背負って毎日歩いた道を、今こうしてカメラ片手に歩いている。風景はすっかり変わったような気もするし、根本のところは何も変わっていない気もする。電柱の数、土手の傾き、雲の流れ方――そういう小さな細部が、不思議と当時のままなのだ。</p>
+
+            <div class="blog-separator"></div>
+
+            <p>私が散歩のついでに写真を撮るようになったのは、もう<strong>二十年以上前</strong>のことになる。きっかけは、北海道美瑛町にある<strong>前田真三氏の写真館「拓真館」</strong>を訪れたことだった。あの日見た写真の数々は、今も記憶のなかにそのままある。丘の連なり、夕暮れの大地、雪の朝の白銀。春夏秋冬それぞれの美しさが、一枚一枚にしんと宿っていた。</p>
+
+            <p>ただ、当時の私が深く心を動かされたのは、写真そのものの美しさだけではなかった。<br>「<strong>この一枚を撮るために、いったい前田氏はどんな状況に身を置いていたのだろう</strong>」――そう想像することの、底知れない楽しさだった。</p>
+
+            <p>真冬の極寒の中、分厚いドカジャンを着込み、カイロを何袋もポケットに忍ばせて、雪に埋もれながら待ち続けたのだろうか。<br>シャッターチャンスを掴むために、同じ場所に何時間立ち続けたのだろう。<br>あるいは、何日も何週間も通って、ようやく「あの一瞬」に巡り合ったのか。<br>写真の奥にある、写真家の沈黙と忍耐を想像すると、たった一枚の風景が、急に重みを増してくる。</p>
+
+            <p>それ以来、私も散歩しながら、いろいろな想像を膨らませて歩くようになった。電柱の脇に咲く野の花を見ては、「ここに来た蜂は、今日何回往復したのだろう」と考える。畑の畝を見ては、「これを耕した人は、今朝何時に起きたのだろう」と考える。何気ない風景にも、無数の物語が隠れている。</p>
+
+            <div class="blog-separator"></div>
+
+            <p>「学童多し」と書かれた古びた標識のそばを通りすぎる。誰もいない田舎道に、それでもなお、子どもらの賑わいを思い出させる気配がある。場所には記憶があり、道には足跡が降り積もる。私は今、その堆積のうえを、ひとりの旅人のように歩いている。</p>
+
+            <p>近所で見慣れた風景なのに、歩き慣れた道での散歩は<strong>季節の終わりと初夏の始まりが手に取るようにわかる</strong>。先週まで枯れ色だった土手に、今日はもう緑が満ちている。風の匂いが少しだけ甘くなる。雲の高さが変わる。そういう移ろいに気づけるのは、同じ道をくり返し歩いているからこそ、だ。</p>
+
+            <div class="blog-separator"></div>
+
+            <p>正直に言えば、<strong>今年は三月からほとんど仕事をしていない状態が続いている</strong>。設備工事の業界も、波がある。だから、散歩は今の私にとって、一番合理的な過ごし方である。<br>お金もかからない。ちょっとした運動にもなる。何より、歩きながら考える時間が、思考のもつれをほどいてくれる。</p>
+
+            <p>その代わりに、慣れないことにも挑戦している。<strong>AIを使ったアプリの開発</strong>である。設備工事の現場で長年やってきた人間が、急にコードや画面設計の話をしているのだから、自分でも可笑しくなる。けれど、やってみると、<strong>AIの力は本当にすごい</strong>。<br>私のような愚かで馬鹿な人間が、まるで利口になったかのように振る舞える時代になった。質問すれば答えが返ってくる。考えを整理してくれる。文章を書いてくれる。「自分は何者かになれるかもしれない」と、ひととき錯覚させてくれる。それだけでも、ありがたい話だ。</p>
+
+            <div class="blog-separator"></div>
+
+            <p>生きているとは、おそらく、こうした夕雲の下に立ち、肺いっぱいに春の匂いを吸い込み、足の裏でアスファルトの温度を確かめている、その一瞬一瞬のことなのだろう。<br>帰途、空が淡い水色に変わるのを見た。雲は西へ流れ、私の影は長く伸びていた。<br>歩けたこと、見えたこと、感じられたこと――この三つが揃った日は、それだけで、もう充分に幸福と呼んでよいのである。</p>
+
+            <span class="blog-tag">小川町</span>
+            <span class="blog-tag">通学路</span>
+            <span class="blog-tag">散歩</span>
+            <span class="blog-tag">春</span>
+            <span class="blog-tag">前田真三</span>
+            <span class="blog-tag">写真</span>
+            <span class="blog-tag">AI</span>
+            <span class="blog-tag">日記</span>
+          </div>
+</div><div class="b-tags"><span>#小川町</span><span>#通学路</span><span>#散歩</span><span>#春</span><span>#前田真三</span><span>#写真</span><span>#AI</span><span>#日記</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260415" data-cat="kouji"><div class="b-meta"><span class="d">2026.04.15</span><span class="cat kouji">工事のこと</span></div><h2>浄化槽まわり外構工事 完了 ── ビフォーアフターでご紹介</h2><div class="b-body">
+<div class="blog-post-body">
+          <div class="blog-photo-grid">
+            <div style="position:relative;">
+              <img width="1200" height="900" src="https://akira5065.github.io/img/ba000e248186.jpg" alt="施工前：浄化槽設置工事中の様子" loading="lazy">
+              <div style="position:absolute;top:12px;left:12px;background:rgba(212,165,116,0.95);color:#1a1a2e;font-weight:700;padding:6px 14px;border-radius:4px;font-size:13px;letter-spacing:2px;">BEFORE</div>
+            </div>
+            <div style="position:relative;">
+              <img width="1200" height="900" src="https://akira5065.github.io/img/d2bf0d7fc422.jpg" alt="施工後：マンホール蓋まわりを砕石と飛び石で仕上げた外構" loading="lazy">
+              <div style="position:absolute;top:12px;left:12px;background:rgba(255,215,0,0.95);color:#1a1a2e;font-weight:700;padding:6px 14px;border-radius:4px;font-size:13px;letter-spacing:2px;">AFTER</div>
+            </div>
+          </div>
+          <p class="photo-caption">左：掘削・設置作業中の様子。右：完成後の外構仕上げ。</p>
+          <p>今回は、新築住宅の浄化槽まわり外構工事をご依頼いただきました。ミニショベルで丁寧に掘削し、浄化槽本体とマンホール蓋の高さをレベルで揃えたうえで、水勾配を取りながら砕石を均一に敷き込みました。</p>
+          <p>仕上げには白御影調の飛び石をアクセントとして配置。実用性だけでなく、お庭の意匠としても映えるよう意識しました。三つ並んだマンホール蓋の高さがピタリと揃い、砕石に敷きムラがないこと、飛び石のラインが通っていること——細部まで気を抜かず施工したポイントです。</p>
+          <div class="blog-separator"></div>
+          <div style="background:rgba(212,165,116,0.08);border-left:3px solid #d4a574;padding:20px 24px;margin:24px 0;border-radius:4px;">
+            <p style="margin:0;color:#e8e3dc;font-style:italic;">「お客様には大変ご満足いただけました。工事依頼、誠にありがとうございました。」</p>
+            <p style="margin:8px 0 0;color:#d4a574;font-size:14px;text-align:right;">── 代表 新井昭男</p>
+          </div>
+          <p>設備は、できあがれば見えなくなる部分も多い仕事です。だからこそ、見えるところも、見えないところも、同じ気持ちで丁寧に。これからも一件一件、真摯に取り組んでまいります。</p>
+          <div style="margin-top:32px;">
+            <span class="blog-tag">#浄化槽工事</span>
+            <span class="blog-tag">#外構工事</span>
+            <span class="blog-tag">#施工事例</span>
+            <span class="blog-tag">#お客様の声</span>
+            <span class="blog-tag">#ビフォーアフター</span>
+          </div>
+          <!-- Comment Section -->
+          
+        </div>
+</div><div class="b-tags"><span>#浄化槽工事</span><span>#外構工事</span><span>#施工事例</span><span>#お客様の声</span><span>#ビフォーアフター</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260412" data-cat="shiki"><div class="b-meta"><span class="d">2026.04.12</span><span class="cat shiki">小川町の四季</span></div><h2>春爛漫の小川町 ── 菜の花街道と、春の珍客について</h2><div class="b-body">
+<div class="blog-post-body">
+        <div class="blog-photo-grid">
+          <img width="600" height="450" src="https://akira5065.github.io/img/1efa4b47163a.jpg" alt="菜の花畑と道路" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/8ebcb943f059.jpg" alt="菜の花が続く道" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/89b8ac5f8b52.jpg" alt="菜の花と丘陵" loading="lazy">
+        </div>
+        <p class="photo-caption">小川町の菜の花街道 ── 黄金色が道の両側を染め上げる</p>
+
+        <p>四月に入り、小川町の河川沿いに広がる菜の花が一斉に咲き誇った。道路の両脇を黄金色の絨毯が覆い尽くすこの光景は、毎年のことながら実に壮観である。アスファルトのカーブに沿って、どこまでも続く菜の花の群生──その鮮烈な黄色は、冬の灰色を一掃し、春の到来を高らかに宣言している。</p>
+
+        <p>重機のエンジン音が響く現場から少し離れると、こうした自然の静謐な美しさに出会える。設備工事に携わる者として、日々インフラを整備し地中に管を埋設する仕事をしているが、ふと顔を上げれば、我々が守るべき暮らしの風景がそこにある。菜の花の黄色は、どこか人の営みの温もりに似ている。</p>
+
+        <div class="blog-photo-grid">
+          <img width="600" height="450" src="https://akira5065.github.io/img/fa33a7912e1f.jpg" alt="曇り空と菜の花" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/db6997c3cd69.jpg" alt="菜の花アップ" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/a7f006bf1813.jpg" alt="菜の花の群生" loading="lazy">
+        </div>
+        <p class="photo-caption">曇天もまた一興 ── 柔らかな光に包まれる菜の花たち</p>
+
+        <p>曇り空の下でも菜の花の存在感は変わらない。むしろ、散乱光に包まれた黄色い花々は、晴天時とはまた違った趣を見せる。写真家の間では「曇天こそ花の撮影日和」と言われるが、まさにその通りで、花の色彩が一層柔らかく際立つ。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-single">
+          <img width="600" height="450" loading="lazy" decoding="async" src="https://akira5065.github.io/img/1fafec0cb159.jpg" alt="紫花菜と小川">
+        </div>
+        <p class="photo-caption">河川敷を彩るムラサキハナナ（オオアラセイトウ）の群落</p>
+
+        <p>菜の花だけではない。川沿いの土手には、紫花菜（ムラサキハナナ）の見事な群落が帯状に広がっていた。正式名称はオオアラセイトウ。中国原産のこの花は、日本各地で野生化し、春の河川敷を紫色のリボンで飾り立てる。黄色の菜の花と紫の花菜──補色の関係にある二つの色が、小川町の春を立体的に彩っている。</p>
+
+        <div class="blog-separator"></div>
+
+        <div class="blog-photo-grid">
+          <img width="600" height="450" src="https://akira5065.github.io/img/062009cb4697.jpg" alt="春の野花" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/d523bcea3aeb.jpg" alt="水仙の群生" loading="lazy">
+        </div>
+
+        <div class="blog-photo-grid">
+          <img width="600" height="450" src="https://akira5065.github.io/img/61cd54c534f6.jpg" alt="白い水仙" loading="lazy">
+          <img width="600" height="450" src="https://akira5065.github.io/img/ea8c520d45b0.jpg" alt="黄水仙" loading="lazy">
+        </div>
+        <p class="photo-caption">母が遺した水仙 ── 三年の沈黙を破って</p>
+
+        <p>ふと足を止めた。ブロック塀の脇に、白い水仙が群れをなして咲いている。そして少し離れた乾いた地面からは、一輪の黄水仙が、まるで何かを伝えるように真っ直ぐ空を向いていた。</p>
+
+        <p>三年前に亡くなった母が、かつてこの辺りに植えたものだろう。生前、庭いじりが好きだった母は、頼まれもしないのに道端や塀の際にまで球根を埋めていた。「花があるだけで道が明るくなるから」と、日に焼けた顔で笑っていたのを覚えている。</p>
+
+        <p>不思議なのは、去年の草刈りの時にはこの花を見かけなかったことだ。水仙の球根は、植物学的に言えば「休眠」という戦略を持つ。土壌の栄養状態や気温の条件が揃わなければ、地中で静かに力を蓄え、一年も二年も沈黙を守ることがある。まるで、咲くべき春を自ら選んでいるかのように。</p>
+
+        <p>あるいは、去年の草刈りで地上部が刈られたことが、かえって球根に刺激を与えたのかもしれない。球根植物にとって、葉を失うストレスは翌年の開花を促すスイッチになることがある──そう考えると、自分が知らず知らずのうちに、母の水仙を「起こした」のかもしれない。</p>
+
+        <p>春の日差しが柔らかく降り注ぐ中、白い花弁が風に揺れている。母がいなくなっても、母が土に託した命は、三年の時を超えてなお、この場所で春を迎えている。花は言葉を持たないが、この水仙は確かに何かを語りかけてくる。「ちゃんとここにいるよ」と。目頭が少し熱くなった。しばらくその場を動けなかった。</p>
+
+        <p>隣ではタンポポが無邪気に黄色い顔を覗かせている。母の水仙とタンポポの競演──計画されたものではない、偶然の花壇。それがたまらなく切なく、そして温かい。</p>
+
+        <div class="blog-separator"></div>
+
+        <!-- 動画セクション -->
+        <h4 style="font-size:18px; color:#2d5a1e; margin:32px 0 16px; text-align:center;">春の珍客 ── 暴走族、今年も参上</h4>
+
+        <p>春になると、毎年のように現れる「珍客」がある。菜の花の咲く土手のすぐそばを、ひときわ大きなエンジン音とともに通り過ぎていく一団――いわゆる暴走族である。今年もまた、その音と影が、のどかな小川町の春の風景に紛れ込んできた。</p>
+
+        <p>道路には、彼らが残していった蛇行のタイヤ痕。アスファルトに刻まれた幾何学模様は、ある種の「記号」のようでもあり、また春の風景に投じられた小さな「事件」の痕跡でもある。地に這う草の合間に伸びる影は、彼らが過ぎ去った後の静けさをいっそう際立たせる。</p>
+
+        <p class="photo-caption">▼ 蛇行するタイヤ痕──春の道に残された「珍客」の記号</p>
+
+        <div class="blog-video-wrap">
+          <video width="1280" height="720" controls preload="metadata" poster="">
+            <source src="https://akira5065.github.io/img/110fe767abc2.mp4" type="video/mp4">
+            お使いのブラウザは動画再生に対応していません。
+          </video>
+        </div>
+
+        <p>ふいに、地響きにも似たエンジン音が遠くから近づいてきた。改造マフラー特有の、空気を切り裂くような重低音である。耳をすませば、十数台はあるだろうか。あの低音が一斉に唸りを上げると、不思議なことに、菜の花の花びらまで微かに揺れている気がしてくる。</p>
+
+        <p>怒りや諦めではなく、ただ「ああ、今年も来たか」という感慨に近い。地域の自然と暮らしの中に、こうした不協和音もまた季節の風物詩として刻まれていく――そんなことを、夕方の草の影を見ながら思った。</p>
+
+        <p>動画を改めて見返すと、彼らのバイクの<strong>回転数（タコメーター）はかなり高い領域で唸っている</strong>。空ぶかしや高回転走行は、エンジンに負担をかけるだけでなく、燃費を著しく悪化させる。今年は原油高・ガソリン高で、レギュラーガソリンも以前の倍近い価格帯。一回の走行で消費する燃料は、決して小さい額ではない。</p>
+
+        <p>……正直に言えば、自分にもそういう時代がなかったとは言えない。若い頃の話だ。エンジンの唸りに胸を躍らせ、夜の道をかっ飛ばしては、翌朝、空っぽに近いガソリンメーターと、財布の薄さに肩を落とす。<br>当時は何も考えていなかった。ただ、走ること自体が祝祭だったのだ。<br>だから、彼らを責める気持ちには、どうしてもなれない。</p>
+
+        <p>けれど、年を重ねて分かったこともある。<br><strong>「思いやり運転」は、自分のお財布にも、地域にも、そしてバイクそのものにも、優しい走り方だ</strong>ということ。<br>低い回転数で、丁寧にスロットルを開ける。それだけで燃費は良くなり、エンジンも長持ちし、近隣の人々の朝の眠りも守られる。<br>若い頃の私に、もし伝えられるなら、そう声をかけたい。</p>
+
+        <p>春の風が、変わらず田畑を渡っていく。来年もまた、彼らがこの道を通るだろう。そのとき、エンジン音が少しだけ穏やかになっていたら――それは、この里にとっても、彼ら自身にとっても、そしてかつての自分自身にとっても、ほんの小さな幸福の始まりかもしれない。</p>
+
+        <p class="photo-caption">▼ 唸りを上げる「春の珍客」──小川町の春の風物詩</p>
+
+        <div class="blog-video-wrap">
+          <video width="1280" height="720" controls preload="metadata">
+            <source src="https://akira5065.github.io/bousouzoku_2.mp4" type="video/mp4">
+            お使いのブラウザは動画再生に対応していません。
+          </video>
+        </div>
+
+        <p style="margin-top: 24px;">菜の花の黄、紫花菜の紫、母の遺した水仙の白、そして暴走族のタイヤ痕──光も影も、清も濁も、すべてを抱えながら春は深まっていく。設備工事に携わる者として、地中の見えない管を整え、地上の暮らしを支える日々のなかで、ふと顔を上げて見るこの里の風景こそが、私の仕事の意味を静かに教えてくれる。</p>
+
+        <p>来年もまた、この場所に春が来るだろう。菜の花は咲き、水仙は眠りから目覚め、そして珍客もまた現れるかもしれない。それでいい。それが、生きている町の証なのだから。</p>
+
+        
+      </div>
+</div><div class="b-tags"><span>#小川町</span><span>#春</span><span>#菜の花</span><span>#水仙</span><span>#暴走族</span><span>#日記</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+<article class="b-post" id="post-20260410" data-cat="kouji"><div class="b-meta"><span class="d">2026.04.10</span><span class="cat kouji">工事のこと</span></div><h2>ときがわ町の井戸ポンプ交換 ── 山間地域の暮らしを支える</h2><div class="b-body">
+<div class="blog-post-body">
+        <p>比企郡ときがわ町（ときがわまち）の山間部にあるお宅から、「井戸の水が出なくなった」とのご連絡をいただき、緊急対応で井戸ポンプの点検・交換工事を行いました。</p>
+
+        <p>ときがわ町は山間地域が多く、上水道が来ていない地区では今も井戸を生活用水として使っているお宅が多くあります。井戸ポンプは10〜15年程度で寿命を迎えることが多く、特に冬場の寒さで配管凍結による故障も少なくありません。</p>
+
+        <p>現地で点検したところ、ジェットポンプのモーター焼損が原因と判明。井戸の深さは約8m、家族4人分の使用量を考慮し、井戸用浅井戸ポンプ（200V・400W）を選定し交換しました。</p>
+
+        <p>ポンプ本体の交換に加え:<br>
+        ・配管の保温材巻き直し（凍結防止）<br>
+        ・圧力タンクの清掃<br>
+        ・電源部の漏電対策<br>
+        ・水質確認（簡易検査）<br>
+        も同時実施し、しばらく安心してお使いいただける状態に整えました。</p>
+
+        <p>ときがわ町には三波渓谷、慈光寺、雀川砂防ダムなど自然豊かな観光地があり、その周辺の集落には今も井戸ポンプが現役で使われています。山間部・農村部の細やかなニーズにも、地域に根ざした設備工事会社として丁寧に対応してまいります。</p>
+
+        <p>「井戸の水量が減ってきた」「ポンプから異音がする」「冬になると凍る」など、井戸関連のお困りごとはお早めにご相談ください。</p>
+
+        <p style="font-size:13px; color:#666; margin-top:20px; padding:12px; background:#f4f8fb; border-left:3px solid #0879bd;">
+          【ときがわ町・東秩父村など山間地域も即日対応】<br>
+          【井戸ポンプ・浄化槽・給排水工事】TEL 0493-72-5923
+        </p>
+
+        <span class="blog-tag">ときがわ町</span>
+        <span class="blog-tag">井戸ポンプ</span>
+        <span class="blog-tag">山間地域</span>
+        <span class="blog-tag">緊急対応</span>
+        <span class="blog-tag">比企郡</span>
+      </div>
+</div><div class="b-tags"><span>#ときがわ町</span><span>#井戸ポンプ</span><span>#山間地域</span><span>#緊急対応</span><span>#比企郡</span></div><a class="b-back" href="#top">↑ 記事の一覧へ</a></article>
+    </div>
+  </div>
+</section>
 </main>
-
 <footer>
-  © 2026 新井昭男 &nbsp;·&nbsp; 一日一散歩、一散歩一思索
+  <div class="container">
+    <div>
+      <b>株式会社新井設備工業</b><br>
+      〒355-0314 埼玉県比企郡小川町大字中爪47番地3<br>
+      TEL 0493-72-5923 ／ FAX 0493-72-3391
+    </div>
+    <nav aria-label="フッター">
+      <a href="index.html#services">事業内容</a><a href="index.html#public">公共工事の実績</a><a href="index.html#works">施工事例</a><a href="index.html#movie">動画</a><a href="blog.html">社長ブログ</a><a href="index.html#company">会社概要</a><a href="index.html#contact">お問い合わせ</a>
+    </nav>
+    <div style="width:100%">© 2026 ARAI SETSUBI KOGYO CO., LTD.</div>
+  </div>
 </footer>
 
+<div class="sp-bar">
+  <a class="t" href="tel:0493725923">電話する</a>
+  <a class="m" href="index.html#contact">見積りを頼む</a>
+</div>
+
+<script>
+var mb=document.getElementById('menuBtn'),gn=document.getElementById('gnav');
+mb.addEventListener('click',function(){var o=gn.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+// 分類で絞る（一覧と本文の両方）
+var btns=document.querySelectorAll('.b-tools button'),cnt=document.getElementById('bCount');
+function show(k){
+  var n=0;
+  document.querySelectorAll('[data-cat]').forEach(function(el){
+    var hit=(k==='all'||el.dataset.cat===k); el.hidden=!hit; if(hit&&el.classList.contains('b-card'))n++;
+  });
+  cnt.textContent=n+'件';
+  btns.forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});
+}
+btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.k)})});
+var h=location.hash.replace('#cat-','');
+show(['kouji','shiki','hibi'].indexOf(h)>=0?h:'all');
+// 記事へ飛んできたとき：書体や写真の読み込みで位置がずれたら合わせ直す（自分で動かしたらやめる）
+(function(){
+  var id=location.hash.slice(1),t=id&&id.indexOf('cat-')!==0&&document.getElementById(id);
+  if(!t)return;
+  var moved=false;
+  ['wheel','touchstart','keydown'].forEach(function(e){window.addEventListener(e,function(){moved=true},{once:true})});
+  function fix(){if(!moved)t.scrollIntoView()}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fix);
+  window.addEventListener('load',fix);
+  setTimeout(fix,1500);
+})();
+</script>
 </body>
 </html>
