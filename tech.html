@@ -529,7 +529,7 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
         <span class="askx-no">02 ／ SAITAMA</span>
         <b>積算ソフト <small>（ASK・埼玉県版）</small></b>
         <span class="askx-sub">埼玉県の発注課所19か所の設計書を収録。単価検索・仕様書への当てはめ・内訳書の作成・工種別の閲覧を1画面で。</span>
-        <span class="askx-meta">設計書 5,929件 ／ 単価 417,563行 ／ 令和3〜8年度</span>
+        <span class="askx-meta">収集した設計書 8,767件 ／ 令和3〜8年度（2026.10.31）</span>
         <span class="askx-go">くわしく見る</span>
       </a>
       <a class="askx-card" href="#genba-photo">
@@ -540,10 +540,134 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
         <span class="askx-go">くわしく見る</span>
       </a>
     </div>
-    <p class="askx-foot">▸ 各ソフトの詳細・紹介動画・使い方ガイドは、下の各項目をひらいてご覧いただけます</p>
+    <p class="askx-foot">▸ 2026年秋の改正は <a href="#ask-update" style="color:#22d3ee">リリースノート</a> へ ／ 各ソフトの詳細・紹介動画・使い方ガイドは、下の各項目をひらいてご覧いただけます</p>
   </div>
 </section>
 <!-- ASK-TOPBAND END -->
+<!-- ASK-UPDATE-2026AUTUMN BEGIN （2026年秋の改正。積算ソフトの進化の記録） -->
+<style>
+#ask-update{--c:#22d3ee;--g:#4ade80;position:relative;background:linear-gradient(180deg,#0a1c3f 0%,#07122b 100%);
+  padding:60px 20px 66px;color:#e8f1fb;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;overflow:hidden}
+#ask-update::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(34,211,238,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.045) 1px,transparent 1px);
+  background-size:46px 46px}
+#ask-update .au-in{position:relative;max-width:1080px;margin:0 auto}
+#ask-update .au-mono{font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;letter-spacing:.2em;font-size:11px;color:var(--c);text-transform:uppercase}
+#ask-update h2{margin:10px 0 10px;color:#fff;font-size:clamp(24px,3.4vw,36px);line-height:1.45;font-weight:800}
+#ask-update h2 span{color:var(--c)}
+#ask-update .au-lead{color:#a9bad0;font-size:15px;line-height:1.9;max-width:780px;margin:0 0 26px}
+#ask-update .au-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;align-items:stretch;margin-bottom:34px}
+#ask-update .au-video{all:unset;cursor:pointer;position:relative;display:block;border-radius:14px;overflow:hidden;
+  border:1px solid rgba(34,211,238,.4);box-shadow:0 18px 50px rgba(0,0,0,.45);background:#000;aspect-ratio:16/9}
+#ask-update .au-video img{width:100%;height:100%;object-fit:cover;display:block}
+#ask-update .au-video .au-play{position:absolute;left:50%;top:50%;width:78px;height:78px;margin:-39px 0 0 -39px;border-radius:50%;
+  background:rgba(6,18,43,.72);border:2px solid var(--c);box-shadow:0 0 0 8px rgba(34,211,238,.15)}
+#ask-update .au-video .au-play::after{content:"";position:absolute;left:31px;top:24px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent #fff}
+#ask-update .au-video .au-cap{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;font-size:13px;color:#dbe7f5;
+  background:linear-gradient(0deg,rgba(6,18,43,.9),transparent)}
+#ask-update .au-kpi{display:grid;grid-template-rows:repeat(3,1fr);gap:10px}
+#ask-update .au-k{display:flex;align-items:center;gap:16px;padding:12px 18px;border-radius:12px;border:1px solid rgba(34,211,238,.28);
+  background:linear-gradient(180deg,rgba(13,36,82,.86),rgba(8,20,46,.86))}
+#ask-update .au-k b{font-size:40px;line-height:1;color:#fff;font-weight:900;min-width:2.2em;white-space:nowrap;font-variant-numeric:tabular-nums}
+#ask-update .au-k b small{font-size:16px;color:var(--c);font-weight:700;margin-left:4px}
+#ask-update .au-k span{font-size:13.5px;line-height:1.6;color:#a9bad0}
+#ask-update .au-k span em{display:block;font-style:normal;color:#fff;font-weight:700;font-size:15px}
+#ask-update .au-note{font-size:12.5px;color:#7f97b3;line-height:1.8;margin:-22px 0 34px}
+#ask-update .au-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+#ask-update .au-log{border:1px solid rgba(34,211,238,.24);border-radius:14px;background:rgba(8,20,46,.7);overflow:hidden}
+#ask-update .au-log header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:14px 18px;
+  border-bottom:1px solid rgba(34,211,238,.18);background:rgba(13,36,82,.6)}
+#ask-update .au-log header b{color:#fff;font-size:17px}
+#ask-update .au-log ol{list-style:none;margin:0;padding:6px 0}
+#ask-update .au-log li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:12px 18px;border-bottom:1px dashed rgba(34,211,238,.12)}
+#ask-update .au-log li:last-child{border-bottom:0}
+#ask-update .au-code{font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--c);
+  border:1px solid rgba(34,211,238,.4);border-radius:6px;padding:3px 6px;height:fit-content;text-align:center}
+#ask-update .au-log h4{margin:0 0 4px;color:#fff;font-size:15px;line-height:1.55}
+#ask-update .au-log p{margin:0;color:#a9bad0;font-size:13.5px;line-height:1.8}
+#ask-update .au-log p .d{font-family:"SFMono-Regular",Consolas,monospace;font-size:12px}
+#ask-update .au-log p .m{color:#f87171}
+#ask-update .au-log p .p{color:var(--g)}
+#ask-update .au-proto{margin-top:22px;border-left:3px solid var(--c);border-radius:10px;background:rgba(13,36,82,.6);padding:16px 20px}
+#ask-update .au-proto b{color:#fff}
+#ask-update .au-proto p{margin:6px 0 0;color:#a9bad0;font-size:14px;line-height:1.9}
+#ask-update .au-flow{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:10px;font-size:13px}
+#ask-update .au-flow span{border:1px solid rgba(34,211,238,.35);border-radius:999px;padding:3px 12px;color:#dbe7f5}
+#ask-update .au-flow i{color:var(--c);font-style:normal}
+@media (max-width:480px){#ask-update .au-k b{font-size:32px}}
+@media (max-width:820px){#ask-update .au-top{grid-template-columns:1fr}#ask-update .au-log li{grid-template-columns:1fr;gap:6px}#ask-update .au-code{width:fit-content}}
+</style>
+<section id="ask-update" aria-label="積算ソフトの改正（2026年秋）">
+ <div class="au-in">
+  <span class="au-mono">Release Notes ／ 2026 Autumn Update</span>
+  <h2>積算を、<span>検証できる工学</span>へ。</h2>
+  <p class="au-lead">紹介ページを公開した2026年9月から、2つの積算ソフトに100を超える改正を重ねてきました。
+   目標は「入札前に手に入る資料だけで、役所の予定価格を再現する」こと。開札後に公表された答えと1件ずつ突き合わせ、
+   ずれの原因を突き止めて直す ── その繰り返しの記録です。</p>
+
+  <div class="au-top">
+   <button type="button" class="au-video" onclick="vmOpen('https://akira5065.github.io/ask_media/ask_update_2026autumn.mp4','https://akira5065.github.io/ask_media/update_poster.jpg','積算ソフト（ASK）2026年秋の改正（約50秒）')">
+    <img src="https://akira5065.github.io/ask_media/update_poster.jpg" alt="積算ソフト（ASK）2026年秋の改正の紹介動画" loading="lazy">
+    <span class="au-play"></span>
+    <span class="au-cap">▶ 2026年秋の改正を約50秒で ／ 押すと再生します</span>
+   </button>
+   <div class="au-kpi">
+    <div class="au-k"><b>11<small>/21</small></b><span><em>予定価格がぴたり一致</em>小川町の過去21件。入札前の資料だけで計算</span></div>
+    <div class="au-k"><b>20<small>/21</small></b><span><em>予定価格との差 ±1%以内</em>同じ21件。入札前の資料だけで計算</span></div>
+    <div class="au-k"><b>8,767<small>件</small></b><span><em>収集した埼玉県の設計書</em>2026年10月31日時点。週1回、差分を自動で追加</span></div>
+   </div>
+  </div>
+  <p class="au-note">※ 数字は当社の答え合わせ台帳による（2026年10月時点）。入札後に公表された資料も使って検算する「全資料モード」では21件すべて一致しますが、上の数字は入札前の資料だけで計算した結果です。</p>
+
+  <div class="au-cols">
+   <article class="au-log">
+    <header><b>小川町版</b><span class="au-mono">Ogawa Edition</span></header>
+    <ol>
+     <li><span class="au-code">DATE-SYNC</span><div><h4>単価適用日ひとつで、すべての版を決め直す</h4>
+      <p>年度・労務単価・県単価表・物価資料の号・施工パッケージ・損料表の版を一括で切り替え。<span class="d"><span class="m">− 年度をまたぐと予定価格がずれる</span> → <span class="p">+ 解消</span></span></p></div></li>
+     <li><span class="au-code">NO-LEAK</span><div><h4>入札後の資料が紛れ込む5つの経路を遮断</h4>
+      <p>損料の実績・過去の歩掛表・県の施工歩掛表・諸雑費の備考・代価表の率。「答えを見て当てた」一致を排除し、入札時点で再現できる力だけを測ります。</p></div></li>
+     <li><span class="au-code">NAT-STD</span><div><h4>国の土木工事標準積算基準書から運搬日数を算定</h4>
+      <p>発生土運搬のダンプ日数を、共通編（令和2〜8年版）の土砂等運搬量から計算。<span class="d"><span class="p">町の開示設計書 43通りと一致</span></span></p></div></li>
+     <li><span class="au-code">STD-TABLE</span><div><h4>水道歩掛の表を、国の改定比較表で裏取り</h4>
+      <p>舗装工（人力施工）・仕切弁設置・フランジ継手・伸縮可とう管などを令和4〜8年の改定資料と照合。<span class="d"><span class="p">舗装工 61通り・仕切弁 59通り・フランジ継手 26通り一致</span></span></p></div></li>
+     <li><span class="au-code">BOOK-LINK</span><div><h4>物価本の「号・頁」と単価をつなぐ</h4>
+      <p>単価調書の「建2026年7月291頁」を読み取り、誌面の画像と単価台帳に連結。建設物価・積算資料の二誌平均から有効3桁切捨てまでを自動で。</p></div></li>
+     <li><span class="au-code">ZERO-NET</span><div><h4>0円の行・歩掛の無い行を、二重の網で拾う</h4>
+      <p>黙って安く計算される行を残さず、「未確定の行」として必ず一覧に出します。</p></div></li>
+     <li><span class="au-code">UI/AUDIT</span><div><h4>確認カウンター・計算式の表示・逆算・付箋</h4>
+      <p>未確定・要見積・歩掛なしの件数を常時表示。経費は「対象額×率→丸め」を式で見せ、公表の予定価格から必要な直接工事費を逆算します。</p></div></li>
+    </ol>
+   </article>
+   <article class="au-log">
+    <header><b>埼玉県版</b><span class="au-mono">Saitama Edition</span></header>
+    <ol>
+     <li><span class="au-code">KEN-RULE</span><div><h4>県の積算基準で、諸経費を1円まで計算</h4>
+      <p>共通仮設費・現場管理費・一般管理費等の率と、管材費・処分費の扱い、端数の丸めまで県の基準どおりに。</p></div></li>
+     <li><span class="au-code">SEKO-P</span><div><h4>施工パッケージを、県の構成表から組み立てる</h4>
+      <p>代表機労材の埼玉単価を構成表から引き、単価表の無い年度も再構成。仕様書に書かれた規格（★印）を優先して当てます。</p></div></li>
+     <li><span class="au-code">PARSE+</span><div><h4>施工パッケージ標準単価表の読み取りを強化</h4>
+      <p>空になっていた「材料」「運搬距離」などの列を、令和3〜8年度の全表で補完。<span class="d"><span class="m">− どの距離でも0.3kmの行を拾う（2/20）</span> → <span class="p">+ 20/20 国の表どおり</span></span></p></div></li>
+     <li><span class="au-code">REGION/STAR</span><div><h4>地区別・月別の県単価表と★印（物価資料）を見分ける</h4>
+      <p>県南・県北などの単価地区、月ごとの改定、★印の品を物価資料の値として扱うなど、単価の出どころを取り違えない仕組みに。</p></div></li>
+     <li><span class="au-code">AUTO-DL</span><div><h4>県の設計書を、週1回自動で追加取得</h4>
+      <p>取得済みとだぶらない差分だけを集めてデータベースへ。収集した設計書は8,767件（2026年10月31日時点）。</p></div></li>
+     <li><span class="au-code">CROSS</span><div><h4>ATLAS・Gaia・頂の積算と行ごとに照合</h4>
+      <p>市販の積算ソフトの結果を何本でも読み込み、異常（30%）・注意（15%）・欠落・一致を色分け。一人だけ違う単価を見つけます。</p></div></li>
+    </ol>
+   </article>
+  </div>
+
+  <div class="au-proto">
+   <b>品質の守り方 ── 直すたびに、全部を測り直す</b>
+   <p>1か所の修正が、ほかの工事の金額を動かしていないかを毎回確かめています。「計算は変わらない」はずの整理は、違いが0件であることを確認してから次へ。
+    計算が変わる直しは、その理由と、開示設計書と何通り一致したかを記録に残します。</p>
+   <div class="au-flow"><span>修正</span><i>→</i><span>21件×全行を計算し直す</span><i>→</i><span>単価・金額・工事価格・最低制限価格を前後で比較</span><i>→</i><span>差 0件を確認して次へ</span></div>
+  </div>
+ </div>
+</section>
+<!-- ASK-UPDATE-2026AUTUMN END -->
+
 <!-- ASK-SECTIONS BEGIN （自社開発ソフトの紹介。ホームページに載せる.py が入れています） -->
 <!-- ================================================================
   株式会社新井設備工業「小川町 過去単価・項目検索（ASK）」紹介セクション
