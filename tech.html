@@ -540,7 +540,7 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
         <span class="askx-go">くわしく見る</span>
       </a>
     </div>
-    <p class="askx-foot">▸ 2026年秋の改正は <a href="#ask-update" style="color:#22d3ee">リリースノート</a> へ ／ 各ソフトの詳細・紹介動画・使い方ガイドは、下の各項目をひらいてご覧いただけます</p>
+    <p class="askx-foot">▸ 更新履歴（最新 2026.11.13）と2026年秋の改正は <a href="#ask-update" style="color:#22d3ee">リリースノート</a> へ ／ 各ソフトの詳細・紹介動画・使い方ガイドは、下の各項目をひらいてご覧いただけます</p>
   </div>
 </section>
 <!-- ASK-TOPBAND END -->
@@ -596,6 +596,30 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
 #ask-update .au-flow i{color:var(--c);font-style:normal}
 @media (max-width:480px){#ask-update .au-k b{font-size:32px}}
 @media (max-width:820px){#ask-update .au-top{grid-template-columns:1fr}#ask-update .au-log li{grid-template-columns:1fr;gap:6px}#ask-update .au-code{width:fit-content}}
+#ask-update .au-ver{position:relative;margin:0 0 34px;border:1px solid rgba(34,211,238,.28);border-radius:14px;
+  background:linear-gradient(135deg,rgba(13,36,82,.78),rgba(8,20,46,.88));padding:18px 22px 6px;overflow:hidden}
+#ask-update .au-ver::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(rgba(34,211,238,.16),transparent 70%);pointer-events:none}
+#ask-update .au-ver-h{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 14px;margin:0 0 14px}
+#ask-update .au-ver-now{font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;font-size:11px;letter-spacing:.2em;color:#dbe7f5}
+#ask-update .au-ver-now b{color:var(--c);font-weight:700;margin-left:6px}
+#ask-update .au-tl{position:relative;list-style:none;margin:0;padding:0 0 0 26px}
+#ask-update .au-tl::before{content:"";position:absolute;left:7px;top:8px;bottom:22px;width:2px;
+  background:linear-gradient(180deg,var(--c),rgba(34,211,238,.08))}
+#ask-update .au-tl>li{position:relative;padding:0 0 20px}
+#ask-update .au-tl>li::before{content:"";position:absolute;left:-25px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:#07122b;border:2px solid var(--c)}
+#ask-update .au-tl>li.now::before{background:var(--c);box-shadow:0 0 0 5px rgba(34,211,238,.18),0 0 16px rgba(34,211,238,.85)}
+#ask-update .au-tv{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:0 0 4px}
+#ask-update .au-tv time{font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;font-size:14px;letter-spacing:.14em;color:var(--c);font-weight:700}
+#ask-update .au-tag{font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;font-size:10.5px;letter-spacing:.16em;color:#dbe7f5;border:1px solid rgba(34,211,238,.45);
+  border-radius:999px;padding:1px 9px}
+#ask-update .au-tag.new{background:var(--c);border-color:var(--c);color:#06142e;font-weight:700}
+#ask-update .au-tl h4{margin:0 0 4px;color:#fff;font-size:16px;line-height:1.55}
+#ask-update .au-tl ul{margin:0;padding:0 0 0 1.1em;color:#a9bad0;font-size:13.5px;line-height:1.85}
+#ask-update .au-tl ul b{color:#fff}
+#ask-update .au-dlt{display:inline-block;margin-left:6px;font-family:"SFMono-Regular",Consolas,"Roboto Mono",monospace;font-size:11.5px;color:var(--g);letter-spacing:.04em}
+@media (max-width:640px){#ask-update .au-ver{padding:16px 16px 4px}#ask-update .au-dlt{display:block;margin:2px 0 0}}
 </style>
 <section id="ask-update" aria-label="積算ソフトの改正（2026年秋）">
  <div class="au-in">
@@ -606,7 +630,7 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
    ずれの原因を突き止めて直す ── その繰り返しの記録です。</p>
 
   <div class="au-top">
-   <button type="button" class="au-video" onclick="vmOpen('https://akira5065.github.io/ask_media/ask_update_2026autumn.mp4?v=3','https://akira5065.github.io/ask_media/update_poster.jpg','積算ソフト（ASK）2026年秋の改正（約90秒）')">
+   <button type="button" class="au-video" onclick="vmOpen('https://akira5065.github.io/ask_media/ask_update_2026autumn.mp4?v=4','https://akira5065.github.io/ask_media/update_poster.jpg','積算ソフト（ASK）2026年秋の改正（約90秒）')">
     <img src="https://akira5065.github.io/ask_media/update_poster.jpg" alt="積算ソフト（ASK）2026年秋の改正の紹介動画" loading="lazy">
     <span class="au-play"></span>
     <span class="au-cap">▶ 2026年秋の改正を約90秒で（音声あり） ／ 押すと再生します</span>
@@ -614,10 +638,39 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
    <div class="au-kpi">
     <div class="au-k"><b>11<small>/21</small></b><span><em>予定価格がぴたり一致</em>小川町の過去21件。入札前の資料だけで計算</span></div>
     <div class="au-k"><b>20<small>/21</small></b><span><em>予定価格との差 ±1%以内</em>同じ21件。入札前の資料だけで計算</span></div>
-    <div class="au-k"><b>8,767<small>件</small></b><span><em>収集した埼玉県の設計書</em>2026年10月31日時点。週1回、差分を自動で追加</span></div>
+    <div class="au-k"><b>8,769<small>件</small></b><span><em>収集した埼玉県の設計書</em>2026年11月13日時点。週1回、差分を自動で追加</span></div>
    </div>
   </div>
-  <p class="au-note">※ 数字は当社の答え合わせ台帳による（2026年10月時点）。入札後に公表された資料も使って検算する「全資料モード」では21件すべて一致しますが、上の数字は入札前の資料だけで計算した結果です。動画の音声は合成音声（HTS voice tohoku-f01, 東北大学 伊藤・能勢研究室, CC BY 4.0）を使っています。</p>
+  <p class="au-note">※ 数字は当社の答え合わせ台帳による（2026年10月時点）。入札後に公表された資料も使って検算する「全資料モード」では21件すべて一致しますが、上の数字は入札前の資料だけで計算した結果です。動画の音声は合成音声です。</p>
+
+  <div class="au-ver" aria-label="積算ソフトの更新履歴">
+   <div class="au-ver-h"><span class="au-mono">Version History ／ 更新履歴</span><span class="au-ver-now">LATEST<b>2026.11.13</b></span></div>
+   <ol class="au-tl">
+    <li class="now">
+     <div class="au-tv"><time datetime="2026-11-13">2026.11.13</time><span class="au-tag new">LATEST</span><span class="au-tag">DATA ／ MEDIA</span></div>
+     <h4>収録データを41課所へ拡大。紹介動画も最新に</h4>
+     <ul>
+      <li>埼玉県の設計書 <b>8,769件</b>・<b>41課所</b>・令和2〜8年度を収録（単価の入った明細 630,626行・単価マスタ 196,097種）<span class="au-dlt">設計書 5,929 → 8,769件 ／ 課所 19 → 41（2026.09.16 公開時との比較）</span></li>
+      <li>紹介（約90秒）・使い方（約11分）の動画を作り直し。今の画面と機能（県の積算基準による諸経費の計算、東京都・栃木県・長野県・全国の単価の検索）を紹介し、社名・歩掛の読みを直し、問い合わせ先を Gmail に</li>
+      <li>2026年秋の改正の紹介動画を、積算ソフトの案内と同じ声に（収集件数も最新に）</li>
+     </ul>
+    </li>
+    <li>
+     <div class="au-tv"><time datetime="2026-10-31">2026.10.31</time><span class="au-tag">AUTUMN UPDATE</span></div>
+     <h4>2026年秋の改正 ── 積算を、検証できる工学へ</h4>
+     <ul>
+      <li>小川町版・埼玉県版あわせて100を超える改正（下のリリースノート）</li>
+      <li>小川町の過去21件で、入札前の資料だけで予定価格が11件ぴたり一致・20件が±1%以内（2026年10月時点）</li>
+      <li>埼玉県の設計書を週1回、取得済みとだぶらない差分だけ自動で追加</li>
+     </ul>
+    </li>
+    <li>
+     <div class="au-tv"><time datetime="2026-09-16">2026.09.16</time><span class="au-tag">LAUNCH</span></div>
+     <h4>2つの積算ソフトの紹介ページと動画を公開</h4>
+     <ul><li>小川町版（過去単価・項目検索）と埼玉県版（積算ソフト）の紹介・使い方の動画</li></ul>
+    </li>
+   </ol>
+  </div>
 
   <div class="au-cols">
    <article class="au-log">
@@ -651,7 +704,7 @@ section+section:not(#ask-top):not(.ask-sec)::before{content:"";display:block;wid
      <li><span class="au-code">REGION/STAR</span><div><h4>地区別・月別の県単価表と★印（物価資料）を見分ける</h4>
       <p>県南・県北などの単価地区、月ごとの改定、★印の品を物価資料の値として扱うなど、単価の出どころを取り違えない仕組みに。</p></div></li>
      <li><span class="au-code">AUTO-DL</span><div><h4>県の設計書を、週1回自動で追加取得</h4>
-      <p>取得済みとだぶらない差分だけを集めてデータベースへ。収集した設計書は8,767件（2026年10月31日時点）。</p></div></li>
+      <p>取得済みとだぶらない差分だけを集めてデータベースへ。収集した設計書は8,769件（2026年11月13日時点）。</p></div></li>
      <li><span class="au-code">CROSS</span><div><h4>ATLAS・Gaia・頂の積算と行ごとに照合</h4>
       <p>市販の積算ソフトの結果を何本でも読み込み、異常（30%）・注意（15%）・欠落・一致を色分け。一人だけ違う単価を見つけます。</p></div></li>
     </ol>
